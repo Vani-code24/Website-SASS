@@ -2,9 +2,6 @@
 // This file contains styles that are specific to the home page.
 // ---------------
 
-.container{
-    @include center;
-}
 .hero{
     @include backgroundimg('/src/images/hero-bg-image_2022-04-11/hero-bg-image.png');
 
@@ -88,6 +85,7 @@
         box-shadow: 0 0 90px -15px rgba(41, 44, 28, 0.1);
       
     }
+  
 
     &__img{
         @include position(relative);
@@ -110,7 +108,7 @@
     &__btns{
         @include padding($total:8px);
         float:left;
-        @include base($font-family,12px,500,#fff,0);
+        @include base($font-family,12px,500,$color-text,0);
         @include margin($right:6px);
     }
     &__icon{
@@ -179,6 +177,7 @@
         .btn--black{
             @include margin($top:68px);
         }
+     
 
     }
 //deals
@@ -328,7 +327,6 @@
     &__subhead{
         display: inline-block;
         @include base($font-family,$font-siz:18px,$font-weigh:400,$color:$white,$letter-spac:0);
-        border:1px solid red;
     }
     &__icon{
         display: inline-block;
@@ -687,12 +685,13 @@
     &__allcards{
         @include cards('values__card');
         @include padding($top:120px,$bottom:63px);
+      
         .values__card{
-
+            
             @include mq("lg",max){
                 @include size(100%,$max-width:500px);
                 @include margin($top:0,$bottom:20px,$right:0,$left:0);
-                
+              
             }
         }
     }
@@ -714,7 +713,7 @@
             @include base($font-family,28px,400,#111111,0,left);
             line-height: 36px;
             @include margin($top:19px);
-        
+            min-height: 70px;
             @include mq("xl",max){
                 @include base($font-siz:20px);
             }
@@ -730,151 +729,6 @@
 
 
 
-
-
-
-//footer
-.footer{
-    background-color:#151515;
-    .container{
-        @include center(2000px);
-    }
-    &__top{
-        @include border($bord:1px solid rgba(255, 255, 255, 0.07));
-        border-top:0;
-        @extend %clearfix;   
-        text-align: center;
-    }
-    &__logo{
-        float:left;
-     img{
-         width:100%;
-         height:auto;
-     }
-      @include padding($left:120px,$top:30px,$right:120px);
-      @include mq("lg",max){
-        @include padding($left:30px,$right:30px);
-      }
-      @include mq("md",max){
-        float:initial;
-        display: inline-block;
-        @include padding($top:14px);
-      }
-  
-        }
-  
-    &__icons{
-        float:right;
-        font-size: 0;
-        @include mq("sm",max){
-            float:initial;
-        }
-    
-    }
-    &__social{
-        display: inline-block;
-       @include size(100px,100px);
-       @include border($bord:1px solid rgba(255, 255, 255, 0.07));
-        border-top:0;
-        @extend %img;
-        img{
-            @include padding($total:40px);
-            vertical-align: middle;
-            @include mq("md",max){
-                @include padding($total:20px);
-            }
-        }
-        @include mq("md",max){
-            @include size(80px,80px);
-        }
-    }
-    &__content{
-        @include padding(120px,120px,90px,120px);
-        @extend %clearfix;
-        @include mq("lg",max){
-            @include padding($value1:40px,$value2:50px);
-            }
-    }
-    &__sections{
-        display: inline-block;
-        vertical-align: top;
-        @include padding($right:40px);
-        li:first-child{
-            @include base($font-family,16px,500,rgba(255, 255, 255, 0.7),1.14px);
-            @include margin($bottom:49px);
-        }
-        @include mq("lg",max){
-            width:100%;
-            @include padding($right:0px,$bottom:50px);
-
-            }
-    }
-    &__lists{
-        float:left;
-        @include mq("lg",max){
-            float:initial;
-           
-        }
-    }
-    &__address{
-        float:right;
-        @include mq("lg",max){
-            float:initial;
-        }
-    }
-    &__list{
-        @include margin($bottom:22px);
-      
-    }
-    &__link{
-        @include base($font-family,16px,400,rgba(255, 255, 255, 0.5),1.14px);
-        @include links;
-    }
-    &__address{
-        
-        h6{
-            @include base($font-family,16px,500,rgba(255, 255, 255, 0.7),1.14px);
-            @include margin($bottom:36px);
-           
-        }
-
-        p{
-            @include base($font-family,$font-siz:16px,$font-weigh:400,$color:rgba(255, 255, 255, 0.5),$letter-spac:1.14px);
-            line-height: 24px;
-        }
-        span{
-            @include base($font-weigh:500);
-        }
-    }
-    &__bottom{
-        @include padding(60px,120px,60px,120px);
-        @include border($bord:1px solid rgba(255, 255, 255, 0.07));
-        @include mq("lg",max){
-            @include padding(60px,50px,60px,50px);
-        }
-        a{
-            @include links;
-        }
-
-        span{
-            @include base($font-family,$font-siz:14px,$color:rgba(255, 255, 255, 0.5),$letter-spac:1px);
-            @include mq("lg",max){
-                float: initial;
-             }
-        }
-
-        a{
-            @include base($font-family,$font-siz:14px,$font-weigh:500,$color:rgba(255, 255, 255, 0.5),$letter-spac:1px);
-            float:right;
-            @include margin($right:20px);
-            @include mq("lg",max){
-               float: initial;
-            }
-        }
-    }
-
-    }
-   
 
 
 
