@@ -1,0 +1,880 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// ---------------
+
+.container{
+    @include center;
+}
+.hero{
+    @include backgroundimg('/src/images/hero-bg-image_2022-04-11/hero-bg-image.png');
+
+    &__container{
+        @include position($pos:absolute,$disp:null,$top:50%,$left:50%);
+        transform: translate(-50%,-50%); 
+        width:75%;
+        text-align: center;
+        @include mq('xl',max){
+            width:95%;
+        }
+      
+    }
+    &__inputs{
+        @include inlin-block;
+        background-color:$white;
+        @include padding($total:29px);
+        @include size($width:100%);
+        font-size:0;
+    
+        @include mq("sm",max){
+            @include padding($total:10px);
+           }
+    }
+    
+    & .icon-dropdown{
+        display:inline-block;
+        background-color: $color-text-light;
+       font-size:20px;
+       @include padding($total:10px);
+       @include border($rad:4px);
+       @include margin($right:31px,$bottom:10px);
+       text-align: left;
+    }
+    .dropdowns{
+        @include position($top:60px);
+    }
+    &__dropdown1{
+        @include size($width:100%,$max-width:219px);
+        @include mq("sm",max){
+            @include size($width:100%,$max-width:400px);
+           }
+    }
+    &__dropdown2{
+        @include size($width:100%,$max-width:188px);
+       @include mq("sm",max){
+        @include size($width:100%,$max-width:400px);
+       }
+    }
+    &__header{
+        @include base($font-family,42px,500,$white,$align:left);
+    }
+    &__subhead{
+        @include base($font-family,18px,$font-weigh:400,$color:$white,$align:left)
+    }
+    &__content{
+        @include padding($bottom:53px);
+    }
+    &--icn{
+        float:right;
+    }
+
+}
+
+
+//features styles
+.features{
+    &__allcards{
+        @include cards('features__box');
+        @include padding($top:89px);
+        .features__box{
+            @include mq("lg",max){
+              @include size($max-width:400px,$width:100%);
+   
+        }
+        
+        }
+      
+    }
+    &__box{
+        box-shadow: 0 0 90px -15px rgba(41, 44, 28, 0.1);
+      
+    }
+
+    &__img{
+        @include position(relative);
+    }
+    &__img img{
+        @extend %image;
+    }
+    &__top{
+        @include position(absolute,$top:10px);
+        width:100%;
+        @include padding($total:10px);
+        @extend %clearfix;
+    }
+    &__bottom{
+        @include position(absolute,$bottom:10px);
+        width:100%;
+        @include padding($total:10px);
+        @extend %clearfix;
+    }
+    &__btns{
+        @include padding($total:8px);
+        float:left;
+        @include base($font-family,12px,500,#fff,0);
+        @include margin($right:6px);
+    }
+    &__icon{
+       @include featuresicn;
+       background-color: #2a42e8;
+    }
+    &__text{
+        @include base($font-family,15px,500,#2a42e8,0);
+        background-color: $white;
+        @include padding($total:5px);
+        @include border($rad:4px);
+        float:left;
+    }
+    &__icn{
+        @include featuresicn;
+    }
+    &__content{
+        @include padding($value1:30px,$value2:18px);
+        @extend %clearfix;
+        text-align: left;
+    h4{
+        @include base($font-family,20px,400,#1d1d1d,0,left);
+        line-height: 32px;
+        @include margin($top:20px);
+    }
+    .location__icon{
+        @include features__icon(#848484);
+     }
+    }
+    &__details1{
+        @include padding($top:23px);
+        .icons__left{
+            float:left;
+            @include features__icon(#2a41e8);
+        }
+        .icons__right{
+            float:right;
+            @include features__icon(#848484);
+        }
+    } 
+    &__details2{
+        @include padding($top:60px);
+
+        .details2__left{
+            float: left;
+            @include features__icon(#111111);
+        }
+        b{
+            @include base($font-siz:16px,$font-weigh:500);
+        }
+
+        .details2__right{
+            float:right;
+            .details2__icons{
+                @include features__icon(#111111);
+                @include base($font-siz:16px,$font-weigh:500);
+                @include margin($right:8px);
+              
+            }
+            a:last-child{
+                @include margin($right:0);
+            }
+          
+        }
+    } 
+        .btn--black{
+            @include margin($top:68px);
+        }
+
+    }
+//deals
+.deals{
+    &__details{
+       
+        @include widthcalc('deals__image',100%,2,560px);
+        padding-top:80px; 
+
+        .deals__image{
+            @include mq('lg',max){
+                @include size($width:100%,$max-width:500px);
+               
+             }
+        }
+
+        
+    }
+  
+    &__subhead{
+        @include base($font-family,18px,400,$light-gray,0,center);
+        @include margin($bottom:37px);
+          }
+    &__head{            
+       @include base($font-family,36px,500,$white,0,center);
+       @include margin($bottom:37px);
+       @include mq('sm',max){
+        @include base($font-siz:30px);
+       }
+       } 
+    &--img1{
+        img{
+            @include size(100%,100%);       
+         }
+    }
+    
+    &--img2{
+        background-color:#292929;
+        vertical-align: top;
+        @include padding($value1:59px,$value2:8px);
+        @include mq('sm',max){
+            @include padding($value1:20px,$value2:2px);
+        }
+        
+    }
+    .btn--orange{
+        @include padding($value1:10px,$value2:25px);
+        @include base($font-family,18px,400,$white,0);
+      
+        span{
+            @include base($font-weigh:500);                
+        }
+        @include mq('sm',max){
+            @include padding($value2:10px);
+            @include base($font-siz:16px);
+           }
+    }
+
+    &__locations{
+        @include base($font-family,18px,400,$light-gray,0,center);
+         @include margin($bottom:37px);  
+    }
+    &_location{
+        @include size(17px,17px);
+        display: inline-block;
+        img{
+            @extend %image;
+            vertical-align: middle;
+          }
+    }
+    &__icons{
+        @extend %clearfix;
+        @include inlin-block;
+        @include padding($right:20px);
+        @include mq('sm',max){
+            @include padding($right:10px);
+        }
+       
+    }
+    &__icon{
+        @include padding($top:60px);
+    }
+
+    &__playicon{
+        @include margin($top:60px,$left:auto,$right:auto);
+        @include size(60px,60px);
+        img{
+           @extend %image;
+        }
+       
+    }
+    &__icn{
+        display: inline-block;
+        @include size(40px,40px);
+        img{
+        @extend %image;
+        }
+        @include mq('xl',max){
+            @include size(30px,30px);
+        }
+        @include mq('sm',max){
+            @include size(20px,20px);
+        }
+    }
+    &__text{
+        float: right;
+        @include padding($left:4px);
+        @include base($font-family,$font-siz:18px,$color:#9b9b9b,$letter-spac:0);
+        span{
+            @include base($font-weigh:500);
+        }
+        @include mq('sm',max){
+            @include base($font-siz:14px);
+        }
+    }
+
+  
+}
+
+
+//properties
+
+.properties{
+    font-size:0;
+
+    &__images{
+    @include overlaytext('properties__text');
+    @include padding($right:20px,$left:20px);
+    @include border($rad:6px); 
+    @include mq('md',max){
+        @include padding($top:20px,$bottom:20px);
+}
+   
+    }
+    &__text{
+       bottom:10px;
+       @include padding($left:20px,$bottom:20px);
+        text-align: left;
+    }
+    &__head{
+        @include base($font-family,$font-siz:32px,$font-weigh:500,$color:$white,$letter-spac:3px);
+       
+            @include mq('md',max){
+                @include base($font-siz:25px);
+        }
+    }
+    &__subhead{
+        display: inline-block;
+        @include base($font-family,$font-siz:18px,$font-weigh:400,$color:$white,$letter-spac:0);
+        border:1px solid red;
+    }
+    &__icon{
+        display: inline-block;
+       img{
+           @extend %image;
+           vertical-align: bottom;
+       }
+    }
+    &__box1,&__box2{
+        font-size: 0;
+        @include padding($top:89px,$bottom:20px);
+        @include mq("md",max){
+           @include padding($top:0px,$bottom:0px);
+         }
+       
+    }
+    &__box1{
+        @include mq("md",max){
+        @include padding($top:50px);
+        }
+    }
+    &__box2{
+        @include mq("md",max){
+        @include padding($bottom:50px);
+        }
+    }
+    &--image1{
+        display: inline-block;
+        @include size(35%);
+        img{
+            @include size(100%,100%);
+         }
+         @include mq("md",max){
+            @include size($width:100%,$max-width:500px); 
+         }
+     
+    }
+    &--image2{
+        display: inline-block;
+        @include size(65%);
+        img{
+           @include size(100%,100%);
+
+        }
+        @include mq("md",max){
+            @include size($width:100%,$max-width:500px); 
+           
+         }
+    }
+    .prop__img{
+        @include position($pos:relative,$disp:inline-block);
+        width:100%;
+        @include size($height:360px);
+        cursor:pointer;
+        transition: transform 1s ease-in-out;
+        @include psuedocoloreffect;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+
+//agents
+.agents{
+    background-color: #f3f3f3;
+    @include cardstext;
+    
+    &__cards{
+        @include cards('agents__profile');
+        @include padding($top:40px,$bottom:40px);
+        @include mq('lg',max){
+            
+        .agents__profile{
+                @include size($width:100%,$max-width:500px);
+                @include margin($left:0,$right:0,$bottom:50px,$top:0);
+        }
+    }
+          
+    }
+    &__profile{
+        @include padding($total:30px);
+        width:100%;
+    }
+ 
+    &__img{
+        @include size($displ:inline-block);
+        width:100%;
+        img{
+          @extend %image;
+        }
+    }
+    &__type{
+        @include font-style1(#999999);
+        text-align: left;
+        @include margin($top:28px);
+    }
+
+    &__name{
+        text-align: left;
+    }
+    &__text{
+        text-align: left;
+        @include padding($top:29px);
+    }
+}
+.social__icon{
+    padding-top:45px;
+    text-align: left;
+}
+.social--icons{
+    @include size($width:60px,$height:60px,$displ:inline-block);
+    padding:18px 18px;
+    @include border($bord:1px solid #ececec,$rad:4px);
+    img{
+        @extend %image;
+    }
+}
+
+//sale
+.sale{
+    @include backgroundimg('/src/images/hero-bg-image_2022-04-11/hero-bg-image.png');
+    &__content{
+        @include size(57%);
+       @include cont-center(35%);
+       background-color:#2842cd;
+       @include border($rad:6px);
+       @include padding($top:90px,$right:120px,$bottom:90px,$left:76px);
+       @include mq('md',max){
+        @include padding($value1:40px,$value2:30px);
+        
+}
+        @include mq('sm',max){
+            @include size(80%);
+            @include cont-center(50%);
+            @include padding($value1:20px,$value2:20px);
+            
+        }
+    }
+    h5{
+        @include base($font-family,$font-siz:60px,$font-weigh:500,$color:$white);
+        @include margin($bottom:35px);
+        line-height:60px;
+              @include mq('md',max){
+                @include base($font-siz:50px);
+       }
+       @include mq('sm',max){
+        @include base($font-siz:45px);
+        line-height:44px;
+        }
+       }
+    p{
+        @include base($font-family,$font-siz:20px,$font-weigh:400,$color:#c6cbea);
+        line-height:30px;
+        @include margin($bottom:42px);
+        @include mq('sm',max){
+            @include base($font-siz:18px);
+        }
+    }
+    .right-icon{
+        @extend %icons;
+    }
+}
+
+//agencies
+
+.agencies{
+    @include cardformat(#fafafa,'agencies__cards');
+   &__allcards{
+    @include padding($top:120px);
+
+    .agencies__cards{
+        @include mq('lg',max){
+           @include size(100%,$max-width:500px);
+           @include margin($bottom:30px,$left:0,$right:0,$top:0);
+        }
+    }
+   }
+  
+    &__icn{
+        @extend %clearfix;
+        @include font-style3(#676767);
+        span{
+            @extend %icons;
+            vertical-align: top;
+         }
+    }
+    &__cards{
+        @include padding($total:30px);
+    
+    }
+    &__icon1{
+        float:left;
+      
+    }
+    &__icon2{
+        float:right;
+    }
+    &__img{
+        @include margin($top:60px,$left:auto,$right:auto);
+        @include size($height:100px);
+        img{
+           width:auto;
+           height:100%;
+        }
+    }
+    &__flag{
+        @include padding($top:32px);
+        @include font-style1(#999999);
+    }
+    &__logo{
+        @extend %icons;
+        vertical-align: top;
+    } 
+      
+    &__text{
+    @include padding($top:15px,$bottom:20px);
+
+}
+}
+
+
+
+//article
+
+.article{
+    background-color:#f3f3f3;
+    @include cardstext;
+    text-align: center;
+
+    &__allcards{
+        @include cards('article__category'); 
+        @include padding($top:120px);
+        .article__category{
+            @include mq("md",max){
+                @include size(100%,$max-width:500px);
+            }
+            @include mq("sm",max){
+                @include size(100%,$max-width:500px);
+            }
+        }
+     
+  
+    }
+    &__image{
+        img{
+        @extend %image;
+          }
+    }
+    &__category{
+        text-align: left;
+    }
+    &__content{
+        @include padding($total:20px);
+
+        h4{
+            @include base($font-family,26px,500,#111111,0,left);
+            @include margin($top:16px);
+            min-height:150px;
+            @include mq("lg",max){
+                @include base($font-siz:24px);
+                min-height:100px;
+            }
+            @include mq("md",max){
+                @include base($font-siz:24px);
+                min-height: 50px;
+            }
+
+        }
+    }
+    .btn--primary{
+        @include base($font-siz:13px,$font-weigh:400,$letter-spac:0);
+        @include padding($value1:8px,$value2:14px);
+        display: inline-block;
+    }
+  
+    &__img{
+        display: inline-block;
+        @include margin($top:50px);
+       @include base($font-family,$font-siz:14px,$letter-spac:1px,$color:#111111);
+        span{
+            @extend %icons;
+            vertical-align: top;
+          
+        } 
+       
+    }
+    .btn--black{
+        @include margin($top:120px);
+    }
+}
+
+
+.feed{
+    @include backgroundimg('/src/images/testimonials-bg-1_2022-04-13/testimonials-bg-1.png');
+
+    &__details{
+        @include padding($total:100px);
+        @include mq("md",max){
+            @include padding($total:30px);
+            text-align: center;
+        }
+    }
+    &__subhead{
+        @include base($font-family,$font-siz:14px,$letter-spac:2px,$color:#f4f4f4);
+     
+    }
+    &__head{
+        @include base($font-family,56px,400,$white,0);
+        @include margin($bottom:108px);
+        span{
+            @include base($font-weigh:500);
+        }
+        @include mq("md",max){
+            @include base($font-siz:54px);
+        }
+       
+    }
+    &__content{
+        @include base($font-family,30px,500,#f4f4f4,1px);
+        line-height: 48px;
+        @include mq("md",max){
+            @include base($font-siz:25px);
+            line-height: 40px;
+        }
+    }
+    &__clients{
+        @include padding($top:59px);
+    }
+    &__img{
+        @include inlin-block;
+        @include size(90px,70px); 
+        @include padding($left:7px,$right:7px);
+
+        img{
+            @include size(100%,100%);
+           @include border($rad:50%);
+          
+        }
+    }
+    &__client{
+       @include inlin-block;
+       
+        :first-child{
+          @include base($font-family,24px,500,#f4f4f4,0.8px);  
+        }
+        :last-child{
+            @include base($font-family,15px,400,#afafaf,0.5px);  
+          }
+    }
+}
+
+//values
+
+.values{
+    text-align: center;
+    &__allcards{
+        @include cards('values__card');
+        @include padding($top:120px,$bottom:63px);
+        .values__card{
+
+            @include mq("lg",max){
+                @include size(100%,$max-width:500px);
+                @include margin($top:0,$bottom:20px,$right:0,$left:0);
+                
+            }
+        }
+    }
+    &__img{
+        text-align: left;
+        @include size(45px,45px);  
+        img{
+            @extend %image;
+            vertical-align:bottom;
+        }
+      
+    }
+    &__card{
+        box-shadow: 0 0 90px 0 rgba(41, 44, 28, 0.08);
+        @include padding($total:20px);
+        min-height: 340px;
+
+        h5{
+            @include base($font-family,28px,400,#111111,0,left);
+            line-height: 36px;
+            @include margin($top:19px);
+        
+            @include mq("xl",max){
+                @include base($font-siz:20px);
+            }
+        }
+        p{
+            @include base($font-family,16px,400,#999999,0,left);
+            @include margin($top:21px);
+            line-height: 28px;
+           
+        }
+    }
+}
+
+
+
+
+
+
+//footer
+.footer{
+    background-color:#151515;
+    .container{
+        @include center(2000px);
+    }
+    &__top{
+        @include border($bord:1px solid rgba(255, 255, 255, 0.07));
+        border-top:0;
+        @extend %clearfix;   
+        text-align: center;
+    }
+    &__logo{
+        float:left;
+     img{
+         width:100%;
+         height:auto;
+     }
+      @include padding($left:120px,$top:30px,$right:120px);
+      @include mq("lg",max){
+        @include padding($left:30px,$right:30px);
+      }
+      @include mq("md",max){
+        float:initial;
+        display: inline-block;
+        @include padding($top:14px);
+      }
+  
+        }
+  
+    &__icons{
+        float:right;
+        font-size: 0;
+        @include mq("sm",max){
+            float:initial;
+        }
+    
+    }
+    &__social{
+        display: inline-block;
+       @include size(100px,100px);
+       @include border($bord:1px solid rgba(255, 255, 255, 0.07));
+        border-top:0;
+        @extend %img;
+        img{
+            @include padding($total:40px);
+            vertical-align: middle;
+            @include mq("md",max){
+                @include padding($total:20px);
+            }
+        }
+        @include mq("md",max){
+            @include size(80px,80px);
+        }
+    }
+    &__content{
+        @include padding(120px,120px,90px,120px);
+        @extend %clearfix;
+        @include mq("lg",max){
+            @include padding($value1:40px,$value2:50px);
+            }
+    }
+    &__sections{
+        display: inline-block;
+        vertical-align: top;
+        @include padding($right:40px);
+        li:first-child{
+            @include base($font-family,16px,500,rgba(255, 255, 255, 0.7),1.14px);
+            @include margin($bottom:49px);
+        }
+        @include mq("lg",max){
+            width:100%;
+            @include padding($right:0px,$bottom:50px);
+
+            }
+    }
+    &__lists{
+        float:left;
+        @include mq("lg",max){
+            float:initial;
+           
+        }
+    }
+    &__address{
+        float:right;
+        @include mq("lg",max){
+            float:initial;
+        }
+    }
+    &__list{
+        @include margin($bottom:22px);
+      
+    }
+    &__link{
+        @include base($font-family,16px,400,rgba(255, 255, 255, 0.5),1.14px);
+        @include links;
+    }
+    &__address{
+        
+        h6{
+            @include base($font-family,16px,500,rgba(255, 255, 255, 0.7),1.14px);
+            @include margin($bottom:36px);
+           
+        }
+
+        p{
+            @include base($font-family,$font-siz:16px,$font-weigh:400,$color:rgba(255, 255, 255, 0.5),$letter-spac:1.14px);
+            line-height: 24px;
+        }
+        span{
+            @include base($font-weigh:500);
+        }
+    }
+    &__bottom{
+        @include padding(60px,120px,60px,120px);
+        @include border($bord:1px solid rgba(255, 255, 255, 0.07));
+        @include mq("lg",max){
+            @include padding(60px,50px,60px,50px);
+        }
+        a{
+            @include links;
+        }
+
+        span{
+            @include base($font-family,$font-siz:14px,$color:rgba(255, 255, 255, 0.5),$letter-spac:1px);
+            @include mq("lg",max){
+                float: initial;
+             }
+        }
+
+        a{
+            @include base($font-family,$font-siz:14px,$font-weigh:500,$color:rgba(255, 255, 255, 0.5),$letter-spac:1px);
+            float:right;
+            @include margin($right:20px);
+            @include mq("lg",max){
+               float: initial;
+            }
+        }
+    }
+
+    }
+   
+
+
+
