@@ -1,1 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Sass Task
+        </title>
+        <link rel="stylesheet" href="/src/css/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <a href="javascript:void(0);" class="header__logo">
+                <img src="./src/images/logo (1).svg" alt="logo" class="logo__img">
+            </a>
 
+            <nav class="header__nav">
+                <div class="hamburger">
+                    <span class="bar"></span>
+                </div>
+                <ul class="header__list">
+                    <li class="header__lists icon-dropdown">
+                        <a href="javascript:void(0);" class="header--links">
+                            HOMEPAGE
+                        </a>
+                        <a class="icn">
+                            <img src="/src/images/icons8-down-arrow-32.png">
+                        </a>
+
+                        <ul class="dropdowns">
+                            <li>
+                                <a href="#">
+                                    Sub-1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Sub-2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Sub-3
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__lists icon-dropdown">
+                        <a href="javascript:void(0);" class="header--links">
+                            PROPERTIES
+                        </a>
+                        <a class="icn">
+                            <img src="/src/images/icons8-down-arrow-32.png">
+                        </a>
+
+                        <ul class="dropdowns">
+                            <li>
+                                <a href="#">
+                                    Sub-1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Sub-2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Sub-3
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__lists">
+                        <a href="javascript:void(0);" class="header--links">
+                            ABOUT
+                        </a>
+                    </li>
+                    <li class="header__lists">
+                        <a href="javascript:void(0);" class="header--links">
+                            CONTACT
+                        </a>
+                    </li>
+                </ul>
+                <ul class="header__icons">
+                    <li class="header--links">
+                        <a>
+                            Compare
+                        </a>
+                    </li>
+                    <li class="header--links">
+                        <a href="javascript:void(0);" class="check__icon">
+                            <img src="./src/images/Tick.png" alt="icon">
+                        </a>
+                    </li>
+                    <li class="header--links">
+                        <a href="javascript:void(0);" class="heart__icon">
+                            <img src="/src/images/like (2).png">
+                        </a>
+                    </li>
+                    <li class="header--links">
+                        <a href="javascript:void(0);" class="btn btn--orange">
+                            SUBMIT LISTING
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </header>
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <div class="hero__container">
+                        <div class="hero__content">
+                            <h1 class="hero__header">
+                                Let Us Guide You Home
+                            </h1>
+                            <p class="hero__subhead">
+                                Find the house of your dreams
+                            </p>
+                        </div>
+                        <div class="hero__inputs">
+                            <ul class="hero__dropdown1 icon-dropdown">
+                                <li class="dropdown__header">
+                                    Type
+                                </li>
+                                <li>
+                                    <a class="text">
+                                        Select Type
+                                    </a>
+                                    <a class="icn hero--icn">
+                                        <img src="/src/images/icons8-down-arrow-32.png">
+                                    </a>
+
+                                    <ul class="dropdowns">
+                                        <li>
+                                            <a href="#">
+                                                Sub-1
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Sub-2
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Sub-3
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+
+                            </ul>
+                            <ul class=" hero__dropdown2 icon-dropdown">
+                                <li class="dropdown__header">
+                                    Status
+                                </li>
+                                <li>
+                                    <a class="text">
+                                        Select Status
+                                    </a>
+                                    <a class="icn hero--icn">
+                                        <img src="/src/images/icons8-down-arrow-32.png">
+                                    </a>
+
+                                    <ul class="dropdowns">
+                                        <li>
+                                            <a href="#">
+                                                Sub-1
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Sub-2
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Sub-3
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+
+                            </ul>
+                            <input type="text" placeholder="Search for properties,suburbs or keywords" class="input__text">
+                            <a href="javascript:void(0);" class=" btn--primary">
+                                FIND PROPERTIES
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="features">
+                <div class="container">
+                    <h4 class="section--subhead">
+                        CASAROYAL REAL ESTATE AGENCY
+                    </h4>
+                    <h2 class="section--headers">
+                        Featured
+                        <span>
+                            Properties
+                        </span>
+                    </h2>
+                    <div class="features__allcards">
+                        <div class="features__box">
+                            <div class="features__img">
+                                <img src="/src/images/property-image.png" alt="property-images">
+                                <div class="features__top">
+                                    <a href="javascript:void(0);" class=" features__btns btn--primary">
+                                        HOUSE
+                                    </a>
+                                    <a href="javascript:void(0);" class=" features__btns btn--orange">
+                                        FOR SALE
+                                    </a>
+                                    <a href="javascript:void(0);" class="features__icon">
+                                        <img src="/src/images/flash (2).png" alt="icon">
+                                    </a>
+                                </div>
+                                <div class="features__bottom">
+                                    <a href="javascript:void(0);" class="features__text">
+                                        $320,000.00
+                                    </a>
+                                    <a href="javascript:void(0);" class="features__icn">
+                                        <img src="/src/images/terminals.png" alt="icon">
+                                    </a>
+                                    <a href="javascript:void(0);" class="features__icn">
+                                        <img src="/src/images/icons8-heart-50.png">
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="features__content">
+                                <a class="location__icon">
+                                    <span>
+                                        <img src="/src/images/placeholder.png" alt="location-icon">
+                                    </span>
+                                    Beverly Hills, CA
+
+                                </a>
+                                <h4>
+                                    272 S Rexford Dr, Beverly Hills, CA 90212, USA
+                                </h4>
+                                <div class="features__details1">
+                                    <a href="javascript:void(0);" class=" icons__left">
+                                        <span>
+                                            <img src="./src/images/agent-1-3-60-x-60_2022-04-12/agent-1-3-60-x-60.png" alt="agent--img">
+                                        </span>
+                                        Hellen Mattis
+
+                                    </a>
+                                    <a href="javascript:void(0);" class="icons__right">
+                                        <span>
+                                            <img src="./src/images/calendar.png">
+                                        </span>
+                                        4 months ago
+
+                                    </a>
+                                </div>
+                                <div class="features__details2">
+                                    <a href="javascript:void(0);" class="details2__left">
+                                        <span>
+                                            <img src="./src/images/area-icon.svg" alt="area-icon">
+                                        </span>
+                                        <b>
+                                            2400
+                                        </b>
+                                        Sq Ft
+
+                                    </a>
+                                    <div class="details2__right">
+                                        <a href="javascript:void(0);" class="details2__icons">
+                                            <span>
+                                                <img src="./src/images/garage-icon.svg" alt="garage-icon">
+                                            </span>
+                                            2
+
+                                        </a>
+                                        <a href="javascript:void(0);" class="details2__icons">
+                                            <span>
+                                                <img src="./src/images/bathroom-icon.svg" alt="bathroom-icon">
+                                            </span>
+                                            3
+
+                                        </a>
+                                        <a href="javascript:void(0);" class="details2__icons">
+                                            <span>
+                                                <img src="./src/images/bedroom-icon.svg" alt="bedroom-icon">
+                                            </span>
+                                            3
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="features__box">
+                            <div class="features__img">
+                                <img src="/src/images/property-image_2022-04-12 (1)/property-image.png" alt="property-images">
+                                <div class="features__top">
+                                    <a href="javascript:void(0);" class=" features__btns btn--primary">
+                                        HOUSE
+                                    </a>
+                                    <a href="javascript:void(0);" class=" features__btns btn--orange">
+                                        FOR SALE
+                                    </a>
+                                    <a href="javascript:void(0);" class="features__icon">
+                                        <img src="/src/images/flash (2).png" alt="icon">
+                                    </a>
+                                </div>
+                                <div class="features__bottom">
+                                    <a href="javascript:void(0);" class="features__text">
+                                        $320,000.00
+                                    </a>
+                                    <a href="javascript:void(0);" class="features__icn">
+                                        <img src="/src/images/terminals.png" alt="icon">
+                                    </a>
+                                    <a href="javascript:void(0);" class="features__icn">
+                                        <img src="/src/images/icons8-heart-50.png">
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="features__content">
+                                <a class="location__icon">
+                                    <span>
+                                        <img src="/src/images/placeholder.png" alt="location-icon">
+                                    </span>
+                                    Beverly Hills, CA
+
+                                </a>
+                                <h4>
+                                    272 S Rexford Dr, Beverly Hills, CA 90212, USA
+                                </h4>
+                                <div class="features__details1">
+                                    <a href="javascript:void(0);" class="icons__left">
+                                        <span>
+                                            <img src="./src/images/agent-1-3-60-x-60_2022-04-12/agent-1-3-60-x-60.png" alt="agent--img">
+                                        </span>
+                                        Hellen Mattis
+
+                                    </a>
+                                    <a href="javascript:void(0);" class="icons__right">
+                                        <span>
+                                            <img src="./src/images/calendar.png">
+                                        </span>
+                                        4 months ago
+
+                                    </a>
+                                </div>
+                                <div class="features__details2">
+                                    <a href="javascript:void(0);" class="details2__left">
+                                        <span>
+                                            <img src="./src/images/area-icon.svg" alt="area-icon">
+                                        </span>
+                                        <b>
+                                            2400
+                                        </b>
+                                        Sq Ft
+
+                                    </a>
+                                    <div class="details2__right">
+                                        <a href="javascript:void(0);" class="details2__icons">
+                                            <span>
+                                                <img src="./src/images/garage-icon.svg" alt="garage-icon">
+                                            </span>
+                                            2
+
+                                        </a>
+                                        <a href="javascript:void(0);" class="details2__icons">
+                                            <span>
+                                                <img src="./src/images/bathroom-icon.svg" alt="bathroom-icon">
+                                            </span>
+                                            3
+
+                                        </a>
+                                        <a href="javascript:void(0);" class="details2__icons">
+                                            <span>
+                                                <img src="./src/images/bedroom-icon.svg" alt="bedroom-icon">
+                                            </span>
+                                            3
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="features__box">
+                            <div class="features__img">
+                                <img src="/src/images/property-image_2022-04-12 (2)/property-image.png" alt="property-images">
+                                <div class="features__top">
+                                    <a href="javascript:void(0);" class=" features__btns btn--primary">
+                                        HOUSE
+                                    </a>
+                                    <a href="javascript:void(0);" class=" features__btns btn--orange">
+                                        FOR SALE
+                                    </a>
+                                    <a href="javascript:void(0);" class="features__icon">
+                                        <img src="/src/images/flash (2).png" alt="icon">
+                                    </a>
+                                </div>
+                                <div class="features__bottom">
+                                    <a href="javascript:void(0);" class="features__text">
+                                        $320,000.00
+                                    </a>
+                                    <a href="javascript:void(0);" class="features__icn">
+                                        <img src="/src/images/terminals.png" alt="icon">
+                                    </a>
+                                    <a href="javascript:void(0);" class="features__icn">
+                                        <img src="/src/images/icons8-heart-50.png">
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="features__content">
+                                <a class="location__icon">
+                                    <span>
+                                        <img src="/src/images/placeholder.png" alt="location-icon">
+                                    </span>
+                                    Beverly Hills, CA
+
+                                </a>
+                                <h4>
+                                    272 S Rexford Dr, Beverly Hills, CA 90212, USA
+                                </h4>
+                                <div class="features__details1">
+                                    <a href="javascript:void(0);" class="icons__left">
+                                        <span>
+                                            <img src="./src/images/agent-1-3-60-x-60_2022-04-12/agent-1-3-60-x-60.png" alt="agent--img">
+                                        </span>
+                                        Hellen Mattis
+
+                                    </a>
+                                    <a href="javascript:void(0);" class="icons__right">
+                                        <span>
+                                            <img src="./src/images/calendar.png">
+                                        </span>
+                                        4 months ago
+
+                                    </a>
+                                </div>
+                                <div class="features__details2">
+                                    <a href="javascript:void(0);" class="details2__left">
+                                        <span>
+                                            <img src="./src/images/area-icon.svg" alt="area-icon">
+                                        </span>
+                                        <b>
+                                            2400
+                                        </b>
+                                        Sq Ft
+
+                                    </a>
+                                    <div class="details2__right">
+                                        <a href="javascript:void(0);" class="details2__icons">
+                                            <span>
+                                                <img src="./src/images/garage-icon.svg" alt="garage-icon">
+                                            </span>
+                                            2
+
+                                        </a>
+                                        <a href="javascript:void(0);" class="details2__icons">
+                                            <span>
+                                                <img src="./src/images/bathroom-icon.svg" alt="bathroom-icon">
+                                            </span>
+                                            3
+
+                                        </a>
+                                        <a href="javascript:void(0);" class="details2__icons">
+                                            <span>
+                                                <img src="./src/images/bedroom-icon.svg" alt="bedroom-icon">
+                                            </span>
+                                            3
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="features__box">
+                            <div class="features__img">
+                                <img src="/src/images/property-image_2022-04-12 (3)/property-image.png" alt="property-images">
+                                <div class="features__top">
+                                    <a href="javascript:void(0);" class=" features__btns btn--primary">
+                                        HOUSE
+                                    </a>
+                                    <a href="javascript:void(0);" class=" features__btns btn--orange">
+                                        FOR SALE
+                                    </a>
+                                    <a href="javascript:void(0);" class="features__icon">
+                                        <img src="/src/images/flash (2).png" alt="icon">
+                                    </a>
+                                </div>
+                                <div class="features__bottom">
+                                    <a href="javascript:void(0);" class="features__text">
+                                        $320,000.00
+                                    </a>
+                                    <a href="javascript:void(0);" class="features__icn">
+                                        <img src="/src/images/terminals.png" alt="icon">
+                                    </a>
+                                    <a href="javascript:void(0);" class="features__icn">
+                                        <img src="/src/images/icons8-heart-50.png">
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="features__content">
+                                <a class="location__icon">
+                                    <span>
+                                        <img src="/src/images/placeholder.png" alt="location-icon">
+                                    </span>
+                                    Beverly Hills, CA
+
+                                </a>
+                                <h4>
+                                    272 S Rexford Dr, Beverly Hills, CA 90212, USA
+                                </h4>
+                                <div class="features__details1">
+                                    <a href="javascript:void(0);" class="icons__left">
+                                        <span>
+                                            <img src="./src/images/agent-1-3-60-x-60_2022-04-12/agent-1-3-60-x-60.png" alt="agent--img">
+                                        </span>
+                                        Hellen Mattis
+
+                                    </a>
+                                    <a href="javascript:void(0);" class="icons__right">
+                                        <span>
+                                            <img src="./src/images/calendar.png">
+                                        </span>
+                                        4 months ago
+
+                                    </a>
+                                </div>
+                                <div class="features__details2">
+                                    <a href="javascript:void(0);" class="details2__left">
+                                        <span>
+                                            <img src="./src/images/area-icon.svg" alt="area-icon">
+                                        </span>
+                                        <b>
+                                            2400
+                                        </b>
+                                        Sq Ft
+
+                                    </a>
+                                    <div class="details2__right">
+                                        <a href="javascript:void(0);" class="details2__icons">
+                                            <span>
+                                                <img src="./src/images/garage-icon.svg" alt="garage-icon">
+                                            </span>
+                                            2
+
+                                        </a>
+                                        <a href="javascript:void(0);" class="details2__icons">
+                                            <span>
+                                                <img src="./src/images/bathroom-icon.svg" alt="bathroom-icon">
+                                            </span>
+                                            3
+
+                                        </a>
+                                        <a href="javascript:void(0);" class="details2__icons">
+                                            <span>
+                                                <img src="./src/images/bedroom-icon.svg" alt="bedroom-icon">
+                                            </span>
+                                            3
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="features__box">
+                            <div class="features__img">
+                                <img src="/src/images/property-image.png" alt="property-images">
+                                <div class="features__top">
+                                    <a href="javascript:void(0);" class=" features__btns btn--primary">
+                                        HOUSE
+                                    </a>
+                                    <a href="javascript:void(0);" class=" features__btns btn--orange">
+                                        FOR SALE
+                                    </a>
+                                    <a href="javascript:void(0);" class="features__icon">
+                                        <img src="./src/images/flash (2).png" alt="icon">
+                                    </a>
+                                </div>
+                                <div class="features__bottom">
+                                    <a href="javascript:void(0);" class="features__text">
+                                        $320,000.00
+                                    </a>
+                                    <a href="javascript:void(0);" class="features__icn">
+                                        <img src="/src/images/terminals.png" alt="icon">
+                                    </a>
+                                    <a href="javascript:void(0);" class="features__icn">
+                                        <img src="/src/images/icons8-heart-50.png">
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="features__content">
+                                <a class="location__icon">
+                                    <span>
+                                        <img src="/src/images/placeholder.png" alt="location-icon">
+                                    </span>
+                                    Beverly Hills, CA
+
+                                </a>
+                                <h4>
+                                    272 S Rexford Dr, Beverly Hills, CA 90212, USA
+                                </h4>
+                                <div class="features__details1">
+                                    <a href="javascript:void(0);" class="icons__left">
+                                        <span>
+                                            <img src="./src/images/agent-1-3-60-x-60_2022-04-12/agent-1-3-60-x-60.png" alt="agent--img">
+                                        </span>
+                                        Hellen Mattis
+
+                                    </a>
+                                    <a href="javascript:void(0);" class="icons__right">
+                                        <span>
+                                            <img src="./src/images/calendar.png">
+                                        </span>
+                                        4 months ago
+
+                                    </a>
+                                </div>
+                                <div class="features__details2">
+                                    <a href="javascript:void(0);" class="details2__left">
+                                        <span>
+                                            <img src="./src/images/area-icon.svg" alt="area-icon">
+                                        </span>
+                                        <b>
+                                            2400
+                                        </b>
+                                        Sq Ft
+
+                                    </a>
+                                    <div class="details2__right">
+                                        <a href="javascript:void(0);" class="details2__icons">
+                                            <span>
+                                                <img src="./src/images/garage-icon.svg" alt="garage-icon">
+                                            </span>
+                                            2
+
+                                        </a>
+                                        <a href="javascript:void(0);" class="details2__icons">
+                                            <span>
+                                                <img src="./src/images/bathroom-icon.svg" alt="bathroom-icon">
+                                            </span>
+                                            3
+
+                                        </a>
+                                        <a href="javascript:void(0);" class="details2__icons">
+                                            <span>
+                                                <img src="./src/images/bedroom-icon.svg" alt="bedroom-icon">
+                                            </span>
+                                            3
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="features__box">
+                            <div class="features__img">
+                                <img src="/src/images/property-image.png" alt="property-images">
+                                <div class="features__top">
+                                    <a href="javascript:void(0);" class=" features__btns btn--primary">
+                                        HOUSE
+                                    </a>
+                                    <a href="javascript:void(0);" class=" features__btns btn--orange">
+                                        FOR SALE
+                                    </a>
+                                    <a href="javascript:void(0);" class="features__icon">
+                                        <img src="/src/images/flash (2).png" alt="icon">
+                                    </a>
+                                </div>
+                                <div class="features__bottom">
+                                    <a href="javascript:void(0);" class="features__text">
+                                        $320,000.00
+                                    </a>
+                                    <a href="javascript:void(0);" class="features__icn">
+                                        <img src="/src/images/terminals.png" alt="icon">
+                                    </a>
+                                    <a href="javascript:void(0);" class="features__icn">
+                                        <img src="/src/images/icons8-heart-50.png">
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="features__content">
+                                <a class="location__icon">
+                                    <span>
+                                        <img src="/src/images/placeholder.png" alt="location-icon">
+                                    </span>
+                                    Beverly Hills, CA
+
+                                </a>
+                                <h4>
+                                    272 S Rexford Dr, Beverly Hills, CA 90212, USA
+                                </h4>
+                                <div class="features__details1">
+                                    <a href="javascript:void(0);" class="icons__left">
+                                        <span>
+                                            <img src="./src/images/agent-1-3-60-x-60_2022-04-12/agent-1-3-60-x-60.png" alt="agent--img">
+                                        </span>
+                                        Hellen Mattis
+
+                                    </a>
+                                    <a href="javascript:void(0);" class="icons__right">
+                                        <span>
+                                            <img src="./src/images/calendar.png">
+                                        </span>
+                                        4 months ago
+
+                                    </a>
+                                </div>
+                                <div class="features__details2">
+                                    <a href="javascript:void(0);" class="details2__left">
+                                        <span>
+                                            <img src="./src/images/area-icon.svg" alt="area-icon">
+                                        </span>
+                                        <b>
+                                            2400
+                                        </b>
+                                        Sq Ft
+
+                                    </a>
+                                    <div class="details2__right">
+                                        <a href="javascript:void(0);" class="details2__icons">
+                                            <span>
+                                                <img src="./src/images/garage-icon.svg" alt="garage-icon">
+                                            </span>
+                                            2
+
+                                        </a>
+                                        <a href="javascript:void(0);" class="details2__icons">
+                                            <span>
+                                                <img src="./src/images/bathroom-icon.svg" alt="bathroom-icon">
+                                            </span>
+                                            3
+
+                                        </a>
+                                        <a href="javascript:void(0);" class="details2__icons">
+                                            <span>
+                                                <img src="./src/images/bedroom-icon.svg" alt="bedroom-icon">
+                                            </span>
+                                            3
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <a href="javascript:void(0);" class="btn--black">
+                        ALL PROPERTIES
+                    </a>
+                </div>
+            </section>
+            <section class="deals">
+                <div class="container">
+                    <h4 class="section--subhead">
+                        CASAROYAL REAL ESTATE AGENCY
+                    </h4>
+                    <h2 class="section--headers">
+                        Hot
+                        <span>
+                            Deal
+                        </span>
+                    </h2>
+                    <div class="deals__details">
+                        <div class="deals__image deals--img1">
+                            <img src="/src/images/isaac-benhesed-249429-unsplash-1_2022-04-13/isaac-benhesed-249429-unsplash-1.png" alt="property--image">
+                        </div>
+                        <div class="deals__image deals--img2">
+                            <h6 class="deals__subhead">
+                                Residential Tower For Rent
+                            </h6>
+                            <h4 class="deals__head">
+                                15 Apartments of Type B
+                            </h4>
+                            <div class="deals__locations">
+                                <span class="deals_location">
+                                    <img src="/src/images/icons8-my-location-24.png" alt="location-icon">
+                                </span>
+                                Los Angeles, CA
+                            </div>
+
+                            <a href="javascript:void(0);" class="btn--orange">
+                                From
+                                <span>
+                                    $1,700.00
+                                </span>
+                                Per Month
+                            </a>
+                            <div class="deals__playicon">
+                                <img src="/src/images/play-button (6).png" alt="play_icon">
+                            </div>
+                            <div class="deals__icon">
+                                <div class="deals__icons">
+                                    <span class="deals__icn">
+                                        <img src="/src/images/area-icon_2022-04-13/area-icon.png" alt="area-icon">
+                                    </span>
+                                    <div class="deals__text">
+                                        1600
+                                        <br>
+                                        <span>
+                                            Sq Ft
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="deals__icons">
+                                    <span class="deals__icn">
+                                        <img src="/src/images/bedroom-icon_2022-04-13/bedroom-icon.png" alt="bedroom-icon">
+                                    </span>
+                                    <div class="deals__text">
+                                        2
+                                        <br>
+                                        <span>
+                                            Beds
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="deals__icons">
+                                    <span class="deals__icn">
+                                        <img src="/src/images/bathroom-icon_2022-04-13/bathroom-icon.png" alt="bathroom-icon">
+                                    </span>
+                                    <div class="deals__text">
+                                        2
+                                        <br>
+                                        <span>
+                                            Bath
+                                        </span>
+                                    </div>
+                                </p>
+                            </div>
+                            <div class="deals__icons">
+                                <span class="deals__icn">
+                                    <img src="/src/images/garage-icon_2022-04-13/garage-icon.png" alt="garage-icon">
+                                </span>
+                                <div class="deals__text">
+                                    1
+                                    <br>
+                                    <span>
+                                        Garage
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="properties">
+            <div class="container">
+                <h4 class="section--subhead">
+                    CASAROYAL REAL ESTATE AGENCY
+                </h4>
+                <h2 class="section--headers">
+                    Properties by
+                    <span>
+                        Area
+                    </span>
+                </h2>
+
+                <div class="properties__box1">
+                    <div class="properties__images properties--image1">
+                        <a class="prop__img">
+                            <img src="/src/images/los-angeles_2022-04-13/los-angeles.png">
+                        </a>
+                        <div class="properties__text">
+                            <h5 class="properties__head">
+                                LOS Angeles
+                            </h5>
+                            <a href="javascript:void(0);" class="properties__subhead">
+
+                                <span class="properties__icon">
+                                    <img src="/src/images/icons8-my-location-24.png" alt="location-icon">
+                                </span>
+                                24 Properties
+                            </a>
+                        </div>
+                    </div>
+                    <div class="properties__images properties--image2">
+                        <a class="prop__img">
+                            <img src="/src/images/san-francisco_2022-04-13/san-francisco.png">
+                        </a>
+                        <div class="properties__text">
+                            <h5 class="properties__head">
+                                San Francisco
+                            </h5>
+                            <a href="javascript:void(0);" class="properties__subhead">
+                                <span class="properties__icon">
+                                    <img src="/src/images/icons8-my-location-24.png" alt="location-icon">
+                                </span>
+                                26 Properties
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="properties__box2">
+                    <div class="properties__images properties--image2">
+                        <a class="prop__img">
+                            <img src="/src/images/seattle_2022-04-13/seattle.png">
+                        </a>
+                        <div class="properties__text">
+                            <h5 class="properties__head">
+                                Seattle
+                            </h5>
+                            <a href="javascript:void(0);" class="properties__subhead">
+                                <span class="properties__icon">
+                                    <img src="/src/images/icons8-my-location-24.png" alt="location-icon">
+                                </span>
+                                13 Properties
+                            </a>
+                        </div>
+                    </div>
+                    <div class="properties__images properties--image1">
+                        <a class="prop__img">
+                            <img src="/src/images/san-diego_2022-04-13/san-diego.png">
+                        </a>
+                        <div class="properties__text">
+                            <h5 class="properties__head">
+                                San Diego
+                            </h5>
+                            <a href="javascript:void(0);" class="properties__subhead">
+
+                                <span class="properties__icon">
+                                    <img src="/src/images/icons8-my-location-24.png" alt="location-icon">
+                                </span>
+                                1 Property
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="agents">
+            <div class="container">
+                <h4 class="section--subhead">
+                    MEET OUR TEAM
+                </h4>
+                <h2 class="section--headers">
+                    Our
+                    <span>
+                        Agents
+                    </span>
+                </h2>
+                <div class="agents__cards">
+                    <div class="agents__profile">
+                        <a href="javascript:void(0);" class="agents__img">
+                            <img src="/src/images/agent-image_2022-04-13/agent-image.png" alt="agent-image" class="agents__image">
+                        </a>
+                        <div class="agents__details">
+                            <h5 class="agents__type">
+                                Real Estate Broker
+                            </h5>
+
+                            <h3 class="agents__name">
+                                JOHN DOE
+                            </h3>
+                            <div class="agents__text">
+                                <p>
+                                    123 456 7890
+                                </p>
+                                <p>
+                                    agent@gmail.com
+                                </p>
+                            </div>
+
+                            <div class="social__icon">
+                                <a href="javascript:void(0);" class="social--icons">
+                                    <img src="/src/images/icons8-facebook.svg">
+                                </a>
+                                <a href="javascript:void(0);" class="social--icons">
+                                    <img src="/src/images/icons8-linkedin.svg">
+                                </a>
+                                <a href="javascript:void(0);" class="social--icons">
+                                    <img src="/src/images/icons8-twitter.svg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="agents__profile">
+                        <a href="javascript:void(0);" class="agents__img">
+                            <img src="/src/images/agent-image_2022-04-13 (1)/agent-image.png" alt="agent-image" class="agents__image">
+                        </a>
+                        <div class="agents__details">
+                            <h5 class="agents__type">
+                                Real Estate Broker
+                            </h5>
+                            <h3 class="agents__name">
+                                JANE DOE
+                            </h3>
+                            <div class="agents__text">
+                                <p>
+                                    123 456 7890
+                                </p>
+                                <p>
+                                    agent@gmail.com
+                                </p>
+                            </div>
+                            <div class="social__icon">
+                                <a href="javascript:void(0);" class="social--icons">
+                                    <img src="/src/images/icons8-facebook.svg">
+                                </a>
+                                <a href="javascript:void(0);" class="social--icons">
+                                    <img src="/src/images/icons8-linkedin.svg">
+                                </a>
+                                <a href="javascript:void(0);" class="social--icons">
+                                    <img src="/src/images/icons8-twitter.svg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agents__profile">
+                        <a href="javascript:void(0);" class="agents__img">
+                            <img src="/src/images/agent-image_2022-04-13 (2)/agent-image.png" alt="agent-image" class="agents__image">
+                        </a>
+                        <div class="agents__details">
+                            <h5 class="agents__type">
+                                Real Estate Broker
+                            </h5>
+                            <h3 class="agents__name">
+                                JOHN DOE
+                            </h3>
+                            <div class="agents__text">
+                                <p>
+                                    123 456 7890
+                                </p>
+                                <p>
+                                    agent@gmail.com
+                                </p>
+                            </div>
+                            <div class="social__icon">
+                                <a href="javascript:void(0);" class="social--icons">
+                                    <img src="/src/images/icons8-facebook.svg">
+                                </a>
+                                <a href="javascript:void(0);" class="social--icons">
+                                    <img src="/src/images/icons8-linkedin.svg">
+                                </a>
+                                <a href="javascript:void(0);" class="social--icons">
+                                    <img src="/src/images/icons8-twitter.svg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sale">
+            <div class="container">
+                <div class="sale__content">
+                    <h5>
+                        Want to Sell                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Property?
+                    </h5>
+                    <p>
+                        Let us create a tailored strategic marketing plan and keep
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                track of the selling process.
+                    </p>
+                    <a href="javascript:void(0)" class="btn--black">
+                        MORE DETAILS
+                        <span class="right-icon">
+                            <img src="/src/images/right-arrow.png" alt="right-icon">
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="agencies">
+            <div class="container">
+                <h4 class="section--subhead">
+                    MEET OUR TEAM
+                </h4>
+                <h2 class="section--headers">
+                    Real Estate
+                    <span>
+                        Agencies
+                    </span>
+                </h2>
+                <div class="agencies__allcards">
+                    <div class="agencies__cards">
+                        <div class="agencies__icn">
+                            <a class="agencies__icon1">
+                                <span>
+                                    <img src="/src/images/verified-icon.svg">
+                                </span>
+                                Verified
+                            </a>
+                            <a class="agencies__icon2">
+                                <span>
+                                    <img src="/src/images/star.png">
+                                </span>
+                                4.5
+                            </a>
+                        </div>
+                        <div class="agencies__content">
+                            <div class="agencies__img">
+                                <img src="/src/images/logo_2022-04-13/logo.png">
+                            </div>
+                            <div class="agencies__flag">
+                                <span class="agencies__logo">
+                                    <img src="/src/images/flag.svg">
+                                </span>
+                                San Francisco, USA
+                            </div>
+                            <h4 class="agencies__name">
+                                ProHouse
+                            </h4>
+                            <div class="agencies__text">
+                                <p>
+                                    123 456 7890
+                                </p>
+                                <p>
+                                    agency@email.com
+                                </p>
+                            </div>
+                            <a href="javascript:void(0);" class="btn--light">
+                                3 Properties
+                            </a>
+                        </div>
+                    </div>
+                    <div class="agencies__cards">
+                        <div class="agencies__icn">
+                            <a class="agencies__icon1">
+                                <span>
+                                    <img src="/src/images/verified-icon.svg">
+                                </span>
+                                Verified
+                            </a>
+                            <a class="agencies__icon2">
+                                <span>
+                                    <img src="/src/images/star.png">
+                                </span>
+                                4.5
+                            </a>
+                        </div>
+                        <div class="agencies__content">
+                            <div class="agencies__img">
+                                <img src="/src/images/logo_2022-04-13 (1)/logo.png">
+                            </div>
+                            <div class="agencies__flag">
+                                <span class="agencies__logo">
+                                    <img src="/src/images/flag.svg">
+                                </span>
+                                Los Angeles, USA
+                            </div>
+                            <h4 class="agencies__name">
+                                beHome
+                            </h4>
+                            <div class="agencies__text">
+                                <p>
+                                    123 456 7890
+                                </p>
+                                <p>
+                                    agency@email.com
+                                </p>
+                            </div>
+                            <a href="javascript:void(0);" class="btn--light">
+                                3 Properties
+                            </a>
+                        </div>
+                    </div>
+                    <div class="agencies__cards">
+                        <div class="agencies__icn">
+                            <a class="agencies__icon1">
+                                <span>
+                                    <img src="/src/images/verified-icon.svg">
+                                </span>
+                                Verified
+                            </a>
+                            <a class="agencies__icon2">
+                                <span>
+                                    <img src="/src/images/star.png">
+                                </span>
+                                4.5
+                            </a>
+                        </div>
+                        <div class="agencies__content">
+                            <div class="agencies__img">
+                                <img src="/src/images/logo_2022-04-13 (2)/logo.png">
+                            </div>
+                            <div class="agencies__flag">
+                                <span class="agencies__logo">
+                                    <img src="/src/images/flag.svg">
+                                </span>
+                                Seattle, USA
+                            </div>
+                            <h4 class="agencies__name">
+                                Alain Doe
+                            </h4>
+                            <div class="agencies__text">
+                                <p>
+                                    123 456 7890
+                                </p>
+                                <p>
+                                    agency@email.com
+                                </p>
+                            </div>
+                            <a href="javascript:void(0);" class="btn--light">
+                                3 Properties
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="article">
+            <div class="container">
+                <h4 class="section--subhead">
+                    CASAROYAL NEWS
+                </h4>
+                <h2 class="section--headers">
+                    Articles
+                    <span>
+                        & Tips
+                    </span>
+                </h2>
+                <div class="article__allcards">
+                    <div class="article__category">
+                        <div class="article__image">
+                            <img src="/src/images/image_2022-04-13/image.png">
+                        </div>
+                        <div class="article__content">
+                            <a href="javascript:void(0);" class="btn--primary">
+                                Category
+                            </a>
+                            <h4>
+                                BUYING A HOME
+                            </h4>
+                            <a href="javascript:void(0);" class="article__img">
+                                <span>
+                                    <img src="/src/images/icons8-clock.svg">
+                                </span>
+                                DECEMBER 28, 2018
+                            </a>
+                        </div>
+                    </div>
+                    <div class="article__category">
+                        <div class="article__image">
+                            <img src="/src/images/image_2022-04-13 (1)/image.png">
+                        </div>
+                        <div class="article__content">
+                            <a href="javascript:void(0);" class="btn--primary">
+                                Category
+                            </a>
+                            <h4>
+                                PROS AND CONS ON A COUNTRYSIDE HOUSE
+                            </h4>
+                            <a href="javascript:void(0);" class="article__img">
+                                <span>
+                                    <img src="/src/images/icons8-clock.svg">
+                                </span>
+                                DECEMBER 28, 2018
+                            </a>
+                        </div>
+                    </div>
+                    <div class="article__category">
+                        <div class="article__image">
+                            <img src="/src/images/image_2022-04-13 (2)/image.png">
+                        </div>
+                        <div class="article__content">
+                            <a href="javascript:void(0);" class="btn--primary">
+                                Category
+                            </a>
+                            <h4>
+                                BUYING A HOME
+                            </h4>
+                            <a href="javascript:void(0);" class="article__img">
+                                <span>
+                                    <img src="/src/images/icons8-clock.svg">
+                                </span>
+                                DECEMBER 28, 2018
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <a href="javascript:void(0);" class="btn--black">
+                    MORE ARTICLES & TIPS
+                </a>
+            </div>
+        </section>
+        <section class="values">
+            <div class="container">
+                <h4 class="section--subhead">
+                    CASAROYAL NEWS
+                </h4>
+                <h2 class="section--headers">
+                    Our
+                    <span>
+                        Values
+                    </span>
+                </h2>
+                <div class="values__allcards">
+                    <div class="values__card">
+                        <div class="values__img">
+                            <img src="./src/images/chat (1).png" alt="chat-icon">
+                        </div>
+                        <h5>
+                            Ensuring clear communication
+                        </h5>
+                        <p>
+                            We keep you in the loop every step of the  way. You can rely on a transparent,comprehensible flow of information.
+                        </p>
+                    </div>
+                    <div class="values__card">
+                        <div class="values__img">
+                            <img src="./src/images/telegram-logo.png" alt="telegram-icon">
+                        </div>
+                        <h5>
+                            Making the most of technology
+                        </h5>
+                        <p>
+                            Time is precious. We guarantee a high degree of efficiency and a premium level.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      of service by using the right tools.
+                        </p>
+                    </div>
+                    <div class="values__card">
+                        <div class="values__img">
+                            <img src="./src/images/heart (1).png" alt="heart-icon">
+                        </div>
+                        <h5>
+                            Providing excellent customer service
+                        </h5>
+                        <p>
+                            We are passionate about what we do and we take pride in achieving the personalised results that you have in mind.
+                        </p>
+                    </div>
+                </div>
+                <a href="javascript:void(0)" class="btn--black">
+                    READ MORE
+                </a>
+            </div>
+        </section>
+        <section class="feed">
+            <div class="container">
+                <div class="feed__details">
+                    <h6 class="feed__subhead">
+                        CLIENTS REVIEWS
+                    </h6>
+                    <h3 class="feed__head">
+                        <span>
+                            What
+                        </span>
+                        Our Clients Say
+                    </h3>
+                    <p class="feed__content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend nuncsem, sit amet luctus tellus tempus tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                    </p>
+                    <div class="feed__clients">
+                        <div class="feed__img">
+                            <img src="/src/images/agent-image_2022-04-13 (1)/agent-image.png">
+                        </div>
+                        <div class="feed__client">
+                            <p>
+                                ALAN POE
+                            </p>
+                            <p>
+                                SAN FRANCISCO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <a href="javascript:void(0);" class="footer__logo">
+                        <img src="/src/images/logo (3).svg" alt="logo">
+                    </a>
+                    <div class="footer__icons">
+                        <a href="javascript:void(0);" class="footer__social">
+                            <img src="/src/images/facebook.png" alt="icons">
+                        </a>
+                        <a href="javascript:void(0);" class="footer__social">
+                            <img src="/src/images/Twitter.png" alt="icons">
+                        </a>
+                        <a href="javascript:void(0);" class="footer__social">
+                            <img src="/src/images/Instagram.png" alt="icons">
+                        </a>
+                        <a href="javascript:void(0);" class="footer__social">
+                            <img src="/src/images/Youtube.png" alt="icons">
+                        </a>
+                    </div>
+
+                </div>
+                <div class="footer__content">
+                    <div class="footer__lists">
+                        <ul class="footer__sections">
+                            <li class="footer__list">
+                                INFORMATION
+                            </li>
+                            <li class="footer__list">
+                                <a href="javascript:void(0);" class="footer__link">
+                                    Our Contacts
+                                </a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="javascript:void(0);" class="footer__link">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="javascript:void(0);" class="footer__link">
+                                    terms and Conditions
+                                </a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="javascript:void(0);" class="footer__link">
+                                    FAQs
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="footer__sections">
+                            <li class="footer__list">
+                                LOCATIONS
+                            </li>
+                            <li class="footer__list">
+                                <a href="javascript:void(0);" class="footer__link">
+                                    Beverly Hills
+                                </a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="javascript:void(0);" class="footer__link">
+                                    Los Angeles
+                                </a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="javascript:void(0);" class="footer__link">
+                                    Mission Viejo
+                                </a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="javascript:void(0);" class="footer__link">
+                                    Newport Beach
+                                </a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="javascript:void(0);" class="footer__link">
+                                    Pasadena
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__address">
+                        <h6>
+                            ABOUT CASAROYAL
+                        </h6>
+                        <p>
+                            casaRoyal - Premium Real Estate WordPress
+                            <br>
+                            Theme by
+                            <span>
+                                FantasyThemes
+                            </span>
+                        </p>
+                        <br>
+                        <br>
+                        <p>
+                            111 Wall Stree, USA, New York
+
+                        </p>
+                        <p>
+                            +1 (234) 567 8900
+                        </p>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <span>
+                        Proudly powered by WordPress and casaRoyal by FantasyTheme
+                    </span>
+                    <a href="javascript:void(0);">
+                        Privacy Policy
+                    </a>
+                    <a href="javascript:void(0);">
+                        Terms and Conditions
+                    </a>
+                    <a href="javascript:void(0);">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="/src/JS/script.js"></script>
+</html>
