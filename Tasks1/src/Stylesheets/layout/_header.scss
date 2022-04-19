@@ -1,0 +1,199 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.header{
+    @extend %clearfix;
+    @include padding($top:17px,$right:0,$bottom:17px,$left:31px);
+    @include mq('xl',max){
+            background-color: rgba(75, 78, 78, 0.5);
+            padding:10px 20px;  
+
+    }
+    &__nav{
+        @include mq('xl',max){
+                @include position($right:100%,$top:0);
+                transform:translate(100%);
+                text-align: center;
+                z-index:0;
+                @include size(100%);
+        }
+    }
+  
+    
+    &__logo{
+        float:left;
+        @extend %img;
+    }
+    &__icons{
+        float: right;
+       @include padding($top:10px,$right:0,$bottom:10px,$left:10px);
+        @include mq('xl',max){
+            border:1px solid red;
+            @include position($bottom:-83%,$right:100%);
+            width:100%;
+            transform:translate(100%);
+            text-align: center;
+            z-index:100;
+            @include padding($total:0px);
+    
+        li{
+           width: 100%;
+            background-color: rgba(36, 37, 37);
+            color:white;
+            padding:20px 20px;
+        }
+    }
+    @include mq('xl',max){
+        .nav-change{  
+            transform:translate(0%);  
+           }
+        
+    }
+    }
+ 
+    &__list{
+        float:left;
+        border:1px solid red;
+        @include padding($total:10px);
+    @include mq('xl',max){
+        width:100%;
+        @include padding($total:0px);
+        li{
+            @include size(100%);
+             background-color: rgba(36, 37, 37);
+             color:white;
+             @include padding($total:20px);
+             
+         }
+          a{
+            opacity:1;
+            font-size:17px;
+        }
+    }        
+    }
+    &__lists{
+        display:inline-block;
+    }
+    &--links{
+        @include base($font-family,14px,500,$color-text-links); 
+        @include margin($left:27px);
+        display: inline-block;
+        @include links;
+        @include mq('xl',max){
+            @include margin($left:0);
+            .btn--orange{
+                display: block;
+            }
+        }
+    }
+
+}
+
+.hamburger{
+    display: none;
+    @include size(60px,60px);
+    @include position(relative);
+    right:-80%;
+    z-index:100;
+    cursor: pointer;
+    transform: scale(0.8);
+
+        @include psuedo(gray,$top:0,$right:0){
+                @include border($bord:3px solid black,$rad:50%);
+            }
+            @include mq('xl',max){
+                display: block;
+            }
+             
+    
+& .bar{
+    @include size(50px,2px);
+     z-index: 100;
+     @include position(relative,$disp:block,$top:50%,$left:4%);
+     background-color: white;   
+}   
+
+.bar{
+    @include psuedo(white,$left:1%);
+    @include psuedo(white,'before',$left:1%);
+    &::after{
+        top:10px;
+    }
+    &::before{
+        bottom:10px;
+      }
+    }
+
+    & .change .bar {  
+        background-color: rgba(160, 158, 158, 0);
+
+        &::before{
+            transform: rotate(45deg) translate(8px,8px);
+        }
+        &::after{
+            transform: rotate(-45deg) translate(5px,-8px);
+        }
+        } 
+    }
+
+
+
+
+
+    
+  
+   
+
+
+.check__icon,.heart__icon{
+    width:22px;
+    height:22px;
+    display: inline-block;
+    @include margin(0,20px,0,0);
+        & img{
+            vertical-align: middle;
+            @extend %image; 
+        }
+}
+
+.dropdowns{
+    @include dropdowns;
+}
+.icon-dropdown{
+    @include position($pos:relative,$disp:null);
+    &:hover .dropdowns{
+        display: block;
+    }
+}
+
+
+
+.icn{
+    @include size(10px,10px);
+    @include position(null,$disp:inline-block);
+    cursor: pointer;
+    & img{
+       @extend %image;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
