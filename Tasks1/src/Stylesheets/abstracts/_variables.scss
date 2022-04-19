@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+$font-family: 'Rubik', 'Arial',sans-serif;
+
+//descrtiptive color variables
+
+$white:#fff;
+$blue:#2a41e8;
+$btn-primary:#ff5e15;
+$btn-blue:#2a42e8;
+$orange:#ff5e14;
+$black:#111111;
+$gray:#8c8c8c;
+$Dark-gray:#4b4d4f;
+$dark-black:#232628;
+$light-white:#ececec;
+$light-gray:#9b9b9b;
+$gray-light:#646464;
+$color-shadow: 1px 1px 3px 3px rgb(75, 74, 74,0.5);
+$btn-hover:crimson;
+
+//functional color variables
+$color-primary:$blue;
+$color-text:$white;
+$color-text-light:$light-white;
+$color-text-base:$gray;
+$color-text-links:$Dark-gray;
+$color-text-dark:$black;
+$color-warning:$orange;
+
+
+
+// Medis queries
+
+$breakpoints: (
+    "sm":        600px,
+    "md":       768px,
+    "lg":      992px,
+    "xl":      1124px,
+);
+
+

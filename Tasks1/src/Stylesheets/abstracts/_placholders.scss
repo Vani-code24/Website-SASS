@@ -1,0 +1,76 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass placeholders.
+// -----------------------------------------------------------------------------
+
+%clearfix{
+    &::after{
+        content:'';
+        display: table;
+        clear:both;
+    }
+}
+
+%btn{
+    @include base($font-family,16px,500,#fff,1px);
+    @include border($rad:4px);
+    @include transition($backgclr:$gray);
+
+}
+
+%image{
+    width:100%;
+    height:auto;
+}
+
+%icons{
+    @include size(17px,17px);
+    display: inline-block;
+    img{
+        @extend %image;
+    }
+}
+
+
+
+.btn{
+    &--orange{
+        @extend %btn;
+        background-color:$color-warning;
+        @include padding($total:36px);
+    }
+    &--primary{
+        @extend %btn;
+        background-color:$color-primary;
+        @include padding($value1:24px,$value2:29px);
+        vertical-align: top;
+        display: inline-block;
+       
+      
+    }
+    &--black{
+        @extend %btn;
+        @include border($rad:29px);
+        letter-spacing: 2px;
+        background-color: #000000;
+        @include padding($value1:20px,$value2:30px);
+        display: inline-block;
+        @include mq('sm',max){
+            @include base($font-siz:16px);
+            @include padding($value1:18px,$value2:24px);
+        }
+    }
+    &--light{
+        display: inline-block;
+        @extend %btn;
+        @include base($font-weigh:400,$letter-spac:0,$color:#2a41e8);
+        background-color: #eaedfd;
+        @include padding($value1:15px,$value2:20px);
+    }
+}
+
+        %img{
+            img{
+                @extend %image;
+                vertical-align: bottom;
+                }
+        }
