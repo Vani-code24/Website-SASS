@@ -2,84 +2,102 @@
 // This file contains styles that are specific to the home page.
 // ---------------
 
+
 .hero{
     @include backgroundimg('/src/images/hero-bg-image_2022-04-11/hero-bg-image.png');
-
+    padding-top:1px;
     &__container{
-        @include position($pos:absolute,$disp:null,$top:50%,$left:50%);
-        transform: translate(-50%,-50%); 
-        width:75%;
+        margin:157px auto 0 auto; 
+        width:80%;
         text-align: center;
         @include mq('xl',max){
-            width:95%;
+            width:90%;
+            margin-top:100px;
         }
       
     }
     &__inputs{
-        @include inlin-block;
         background-color:$white;
-        @include padding($total:29px);
-        @include size($width:100%);
+        padding:29px;
+         width:100%;
         font-size:0;
-    
-        @include mq("sm",max){
-            @include padding($total:10px);
-           }
+        text-align: center;
+        // @include mq("sm",max){
+        //     padding:10px;
+        //    }
     }
-    
     & .icon-dropdown{
         display:inline-block;
         background-color: $color-text-light;
        font-size:20px;
-       @include padding($total:10px);
+       padding:10px;
        @include border($rad:4px);
-       @include margin($right:31px,$bottom:10px);
+       margin-right:20px;
+       margin-bottom:10px;
        text-align: left;
-    }
-    .dropdowns{
-        @include position($top:60px);
-    }
-    &__dropdown1{
-        @include size($width:100%,$max-width:219px);
-        @include mq("sm",max){
-            @include size($width:100%,$max-width:400px);
+           @include mq("lg",max){
+           width:100%;
            }
     }
+    &__dropdown1{
+        width:20%;
+        display: inline-block;
+        @include transition;
+        @extend %clearfix;
+    }
     &__dropdown2{
-        @include size($width:100%,$max-width:188px);
-       @include mq("sm",max){
-        @include size($width:100%,$max-width:400px);
-       }
+        display: inline-block;
+        width:calc(100%/6);
+        @include transition;
+        @extend %clearfix;
+    //    @include mq("sm",max){
+    //     width:100%;
+    //     max-width: 400px;
+       
+    //    }
+    }
+    .dropdowns{
+            left:0;
+            top:65px;
     }
     &__header{
-        @include base($font-family,42px,500,$white,$align:left);
+        font:500 42px $font-family;
+        color:$white;
+        text-align: left;
     }
     &__subhead{
-        @include base($font-family,18px,$font-weigh:400,$color:$white,$align:left)
+        font:18px $font-family;
+        color:$white;
+        text-align: left;
     }
     &__content{
-        @include padding($bottom:53px);
+        padding-bottom: 53px;
     }
-    &--icn{
-        float:right;
+    .dropdown__header{
+        display: inline-block;
     }
-
 }
 
 
 //features styles
 .features{
-    &__allcards{
-        @include cards('features__box');
-        @include padding($top:89px);
-        .features__box{
-            @include mq("lg",max){
-              @include size($max-width:400px,$width:100%);
-   
-        }
-        
-        }
-      
+  
+  &__allcards{
+        padding-top: 120px;
+        font-size: 0;
+    }
+    &__box{
+     width:calc(90%/3);
+     display: inline-block;
+     background-color:#fafafa;
+     margin:10px;
+     @include border($rad:4px);
+     @include transition;
+     cursor: pointer;
+        @include mq("lg",max){
+            width:100%;
+            max-width: 400px;
+    }   
     }
     &__box{
         box-shadow: 0 0 90px -15px rgba(41, 44, 28, 0.1);
@@ -88,94 +106,178 @@
   
 
     &__img{
-        @include position(relative);
+        position: relative;
     }
-    &__img img{
-        @extend %image;
-    }
+
     &__top{
-        @include position(absolute,$top:10px);
+        position: absolute;
+        top:10px;
         width:100%;
-        @include padding($total:10px);
+        padding:10px;
         @extend %clearfix;
     }
     &__bottom{
-        @include position(absolute,$bottom:10px);
+        position: absolute;
+        bottom:10px;
         width:100%;
-        @include padding($total:10px);
+        padding:10px;
         @extend %clearfix;
     }
     &__btns{
-        @include padding($total:8px);
+        padding:8px;
         float:left;
-        @include base($font-family,12px,500,$color-text,0);
-        @include margin($right:6px);
+        font:500 12px $font-family;
+        color:$color-text;
+        letter-spacing: 0;
+        margin-right:6px;
     }
     &__icon{
-       @include featuresicn;
+        width:30px;
+        height:30px;
+        @extend %icons;
+        margin-right:8px;
+        float:right;
+        padding:8px;
+        background-color: #000000;
        background-color: #2a42e8;
     }
     &__text{
-        @include base($font-family,15px,500,#2a42e8,0);
+        font:500 15px $font-family;
+        color:$btn-blue;
+        letter-spacing: 0;
         background-color: $white;
-        @include padding($total:5px);
+        padding:5px;
         @include border($rad:4px);
         float:left;
     }
     &__icn{
-        @include featuresicn;
+        width:30px;
+        height:30px;
+        @extend %icons;
+        margin-right:8px;
+        float:right;
+        padding:8px;
+        background-color: #000000;
     }
     &__content{
-        @include padding($value1:30px,$value2:18px);
+        padding:30px 18px;
         @extend %clearfix;
         text-align: left;
     h4{
-        @include base($font-family,20px,400,#1d1d1d,0,left);
+        font:20px $font-family;
+        text-align: left;
+        color:#1d1d1d;
+        letter-spacing: 0;
         line-height: 32px;
-        @include margin($top:20px);
+        margin-top:20px;
     }
     .location__icon{
-        @include features__icon(#848484);
+        font:14px $font-family;
+        color:#848484;
+        letter-spacing: 0;
+        text-align: left;
+         img{
+             vertical-align: middle;
+    
+         }
+         span{
+             width:15px;
+             height:15px;
+             display: inline-block;
+           
+         }
      }
     }
     &__details1{
-        @include padding($top:23px);
+        padding-top:23px;
         .icons__left{
             float:left;
-            @include features__icon(#2a41e8);
+            font:14px $font-family;
+            color:$color-btn-primary;
+            letter-spacing: 0;
+            text-align: left;
+             img{
+                 vertical-align: middle;
+        
+             }
+             span{
+                 width:15px;
+                 height:15px;
+                 display: inline-block;
+               
+             }
         }
         .icons__right{
             float:right;
-            @include features__icon(#848484);
+            font:14px $font-family;
+            color:#848484;
+            letter-spacing: 0;
+            text-align: left;
+             img{
+                 vertical-align: middle;
+        
+             }
+             span{
+                 width:15px;
+                 height:15px;
+                 display: inline-block;
+               
+             }
         }
     } 
     &__details2{
-        @include padding($top:60px);
+       padding-top:60px;
 
         .details2__left{
             float: left;
-            @include features__icon(#111111);
+            font:14px $font-family;
+            color:#111111;
+            letter-spacing: 0;
+            text-align: left;
+             img{
+                 vertical-align: middle;
+        
+             }
+             span{
+                 width:15px;
+                 height:15px;
+                 display: inline-block;
+               
+             }
         }
         b{
-            @include base($font-siz:16px,$font-weigh:500);
+            font:500 16px;
         }
 
         .details2__right{
             float:right;
             .details2__icons{
-                @include features__icon(#111111);
-                @include base($font-siz:16px,$font-weigh:500);
-                @include margin($right:8px);
+                font:14px $font-family;
+                color:$black;
+                letter-spacing: 0;
+                text-align: left;
+                 img{
+                     vertical-align: middle;
+            
+                 }
+                 span{
+                     width:15px;
+                     height:15px;
+                     display: inline-block;
+                   
+                 }
+                font:500 16px $font-family;
+                margin-right:8px;
               
             }
             a:last-child{
-                @include margin($right:0);
+                margin-right:0;
             }
           
         }
     } 
         .btn--black{
-            @include margin($top:68px);
+            margin-top:68px;
         }
      
 
@@ -189,8 +291,8 @@
 
         .deals__image{
             @include mq('lg',max){
-                @include size($width:100%,$max-width:500px);
-               
+                width:100%;
+                max-width: 500px;
              }
         }
 
@@ -198,99 +300,113 @@
     }
   
     &__subhead{
-        @include base($font-family,18px,400,$light-gray,0,center);
-        @include margin($bottom:37px);
+        font:18px $font-family;
+        letter-spacing: 0;
+        text-align: center;
+        color:$light-gray;
+        margin-bottom:37px;
           }
-    &__head{            
-       @include base($font-family,36px,500,$white,0,center);
-       @include margin($bottom:37px);
+    &__head{  
+        font:500 36px $font-family;    
+        color:$white;
+        letter-spacing: 0;
+        text-align: center;     
+       margin-bottom:37px;
        @include mq('sm',max){
-        @include base($font-siz:30px);
+        font-size: 30px;
        }
        } 
     &--img1{
         img{
-            @include size(100%,100%);       
+            width:100%;
+            height:100%;      
          }
     }
     
     &--img2{
         background-color:#292929;
         vertical-align: top;
-        @include padding($value1:59px,$value2:8px);
+        padding:59px 8px;
         @include mq('sm',max){
-            @include padding($value1:20px,$value2:2px);
+            padding:20px 2px;
         }
         
     }
     .btn--orange{
-        @include padding($value1:10px,$value2:25px);
-        @include base($font-family,18px,400,$white,0);
-      
+        padding:10px 25px;
+        font:18px $font-family;
+        color:$white;
+        letter-spacing: 0;
         span{
-            @include base($font-weigh:500);                
+            font-weight: 500;               
         }
         @include mq('sm',max){
-            @include padding($value2:10px);
-            @include base($font-siz:16px);
+            padding-right:10px;
+            padding-left:10px;
+            font-size: 16px;
            }
     }
 
     &__locations{
-        @include base($font-family,18px,400,$light-gray,0,center);
-         @include margin($bottom:37px);  
+        font:18px $font-family;
+        color:$light-gray;
+        letter-spacing: 0;
+        text-align: center;
+         margin-bottom:37px;  
     }
     &_location{
-        @include size(17px,17px);
+        width:17px;
+        height:17px;
         display: inline-block;
         img{
-            @extend %image;
             vertical-align: middle;
           }
     }
     &__icons{
         @extend %clearfix;
-        @include inlin-block;
-        @include padding($right:20px);
+        display:inline-block;
+        vertical-align:middle;
+        padding-right: 20px;
         @include mq('sm',max){
-            @include padding($right:10px);
+            padding-right: 10px;
         }
        
     }
     &__icon{
-        @include padding($top:60px);
+        padding-top: 60px;
     }
 
     &__playicon{
-        @include margin($top:60px,$left:auto,$right:auto);
-        @include size(60px,60px);
-        img{
-           @extend %image;
-        }
+        margin:60px auto 0 auto;
+        width:60px;
+        height:60px;
        
     }
     &__icn{
         display: inline-block;
-        @include size(40px,40px);
-        img{
-        @extend %image;
-        }
+        width:40px;
+        height:40px;
+
         @include mq('xl',max){
-            @include size(30px,30px);
+            width:30px;
+            height:30px;
         }
         @include mq('sm',max){
-            @include size(20px,20px);
+            width:20px;
+            height:20px;
         }
     }
     &__text{
         float: right;
-        @include padding($left:4px);
-        @include base($font-family,$font-siz:18px,$color:#9b9b9b,$letter-spac:0);
+        padding-left: 4px;
+        font:18px $font-family;
+        letter-spacing: 0;
+        color:$light-gray;
         span{
-            @include base($font-weigh:500);
+            font-weight: 500;
         }
         @include mq('sm',max){
-            @include base($font-siz:14px);
+           font-size: 14px;
         }
     }
 
@@ -305,84 +421,104 @@
 
     &__images{
     @include overlaytext('properties__text');
-    @include padding($right:20px,$left:20px);
+    padding-right:20px;
+    padding-left:20px;
     @include border($rad:6px); 
     @include mq('md',max){
-        @include padding($top:20px,$bottom:20px);
+        padding-top: 20px;
+        padding-bottom: 20px;
 }
    
     }
     &__text{
        bottom:10px;
-       @include padding($left:20px,$bottom:20px);
+        padding-left:20px;
+        padding-bottom: 20px;
         text-align: left;
     }
     &__head{
-        @include base($font-family,$font-siz:32px,$font-weigh:500,$color:$white,$letter-spac:3px);
-       
+        font:500 32px $font-family;
+        color:$color-text;
+        letter-spacing: 3px;
             @include mq('md',max){
-                @include base($font-siz:25px);
+                font-size: 25px;
         }
     }
     &__subhead{
         display: inline-block;
-        @include base($font-family,$font-siz:18px,$font-weigh:400,$color:$white,$letter-spac:0);
+        font:18px $font-family;
+        color:$color-text;
+        letter-spacing: 0;
     }
     &__icon{
         display: inline-block;
        img{
-           @extend %image;
            vertical-align: bottom;
        }
     }
     &__box1,&__box2{
         font-size: 0;
-        @include padding($top:89px,$bottom:20px);
+        padding-top:89px;
+        padding-bottom:20px;
+        
         @include mq("md",max){
-           @include padding($top:0px,$bottom:0px);
+            padding-top:0;
+            padding-bottom:0;
          }
        
     }
     &__box1{
         @include mq("md",max){
-        @include padding($top:50px);
+        padding-top: 50px;
         }
     }
     &__box2{
         @include mq("md",max){
-        @include padding($bottom:50px);
+        padding-bottom: 50px;
         }
     }
     &--image1{
         display: inline-block;
-        @include size(35%);
+       width:35%;
         img{
-            @include size(100%,100%);
+            width:100%;
+            height:100%;
          }
          @include mq("md",max){
-            @include size($width:100%,$max-width:500px); 
+            width:100%;
+            max-width:500px; 
          }
      
     }
     &--image2{
         display: inline-block;
-        @include size(65%);
+        width:65%;
         img{
-           @include size(100%,100%);
+         width:100%;
+         height:100%;
 
         }
         @include mq("md",max){
-            @include size($width:100%,$max-width:500px); 
-           
+            width:100%;
+            max-width: 500px;   
          }
     }
     .prop__img{
-        @include position($pos:relative,$disp:inline-block);
+        position: relative;
+        display: inline-block;
         width:100%;
-        @include size($height:360px);
+        height:360px;
         cursor:pointer;
         transition: transform 1s ease-in-out;
-        @include psuedocoloreffect;
+        &::before{
+            position:absolute;
+            content:"";
+            top:0;
+            left:0;
+            background-color: rgba(0, 0, 0, 0.3);
+            width:100%;
+            height: 100%;
+        }
         &:hover{
             transform: scale(1.1);
         }
@@ -392,36 +528,50 @@
 //agents
 .agents{
     background-color: #f3f3f3;
-    @include cardstext;
-    
     &__cards{
-        @include cards('agents__profile');
-        @include padding($top:40px,$bottom:40px);
-        @include mq('lg',max){
-            
-        .agents__profile{
-                @include size($width:100%,$max-width:500px);
-                @include margin($left:0,$right:0,$bottom:50px,$top:0);
-        }
-    }
-          
+        padding-top: 120px;
+        font-size: 0;
     }
     &__profile{
-        @include padding($total:30px);
-        width:100%;
+        padding:30px;
+     width:calc(90%/3);
+     display: inline-block;
+     background-color:#fafafa;
+     margin:10px;
+     @include border($rad:4px);
+     @include transition;
+     cursor: pointer;
+        @include mq('lg',max){
+                width: 100%;
+                max-width: 500px;
+                margin:0 0 50px 0;
+        }     
     }
+    &__name{
+        font:36px $font-family;
+        color:$black;
+        letter-spacing: 0.2px;
+        text-align: center;
+       margin-top:15px;
+       }
+   &__text{
+       font:18px $font-family;
+       color:#636363;
+       letter-spacing: 0;
+       text-align: center;
+       padding-top:15px;
+   }
  
     &__img{
-        @include size($displ:inline-block);
+        display: inline-block;
         width:100%;
-        img{
-          @extend %image;
-        }
     }
     &__type{
-        @include font-style1(#999999);
+        font:18px $font-family;
+        letter-spacing: 0;
+        color:#999999;
         text-align: left;
-        @include margin($top:28px);
+        margin-top:28px;
     }
 
     &__name{
@@ -429,7 +579,7 @@
     }
     &__text{
         text-align: left;
-        @include padding($top:29px);
+        padding-top: 29px;
     }
 }
 .social__icon{
@@ -437,52 +587,56 @@
     text-align: left;
 }
 .social--icons{
-    @include size($width:60px,$height:60px,$displ:inline-block);
+    width:60px;
+    height:60px;
+    display: inline-block;
     padding:18px 18px;
     @include border($bord:1px solid #ececec,$rad:4px);
-    img{
-        @extend %image;
-    }
 }
 
 //sale
 .sale{
     @include backgroundimg('/src/images/hero-bg-image_2022-04-11/hero-bg-image.png');
     &__content{
-        @include size(57%);
-       @include cont-center(35%);
+        width:57%;
+        position: absolute;
+        top:50%;
+        left:35%;
+        transform: translate(-50%,-50%);
+        z-index: 100;
        background-color:#2842cd;
        @include border($rad:6px);
-       @include padding($top:90px,$right:120px,$bottom:90px,$left:76px);
+       padding:90px 120px 90px 76px;
        @include mq('md',max){
-        @include padding($value1:40px,$value2:30px);
+           padding:40px 30px;
         
 }
         @include mq('sm',max){
-            @include size(80%);
+            width:80%;
             @include cont-center(50%);
-            @include padding($value1:20px,$value2:20px);
+            padding:20px;
             
         }
     }
     h5{
-        @include base($font-family,$font-siz:60px,$font-weigh:500,$color:$white);
-        @include margin($bottom:35px);
+        font:500 60px $font-family ;
+        color:$color-text;
+        margin-bottom:35px;
         line-height:60px;
               @include mq('md',max){
-                @include base($font-siz:50px);
+               font-size: 50px;
        }
        @include mq('sm',max){
-        @include base($font-siz:45px);
+        font-size:45px;
         line-height:44px;
         }
        }
     p{
-        @include base($font-family,$font-siz:20px,$font-weigh:400,$color:#c6cbea);
-        line-height:30px;
-        @include margin($bottom:42px);
+        font:20px/30px $font-family;
+        color:#c6cbea;
+        margin-bottom:42px;
         @include mq('sm',max){
-            @include base($font-siz:18px);
+           font-size: 18px;
         }
     }
     .right-icon{
@@ -493,29 +647,53 @@
 //agencies
 
 .agencies{
-    @include cardformat(#fafafa,'agencies__cards');
+    
+    
+    text-align:center;
+  
    &__allcards{
-    @include padding($top:120px);
-
-    .agencies__cards{
-        @include mq('lg',max){
-           @include size(100%,$max-width:500px);
-           @include margin($bottom:30px,$left:0,$right:0,$top:0);
-        }
+       padding-top: 120px;
+       font-size: 0;
+   }
+   &__cards{
+    width:calc(90%/3);
+    display: inline-block;
+    background-color:#fafafa;
+    margin:10px;
+    @include border($rad:4px);
+    @include transition;
+    padding:30px;
+    cursor: pointer;
+    @include mq('lg',max){
+        width:100%;
+        max-width: 500px;
+       margin:0 0 30px 0;
     }
    }
-  
+   &__name{
+    font:36px $font-family;
+    color:$black;
+    letter-spacing: 0.2px;
+    text-align: center;
+    margin-top:15px;
+    }
+    &__text{
+        font:18px $font-family;
+        color:#636363;
+        letter-spacing: 0;
+        text-align: center;
+        padding-top:15px;
+    }
     &__icn{
         @extend %clearfix;
-        @include font-style3(#676767);
+        font:16px $font-family;
+        letter-spacing: 0;
+        color:676767;
+        text-align: center;
         span{
             @extend %icons;
             vertical-align: top;
          }
-    }
-    &__cards{
-        @include padding($total:30px);
-    
     }
     &__icon1{
         float:left;
@@ -525,16 +703,19 @@
         float:right;
     }
     &__img{
-        @include margin($top:60px,$left:auto,$right:auto);
-        @include size($height:100px);
+        margin:60px auto 0 auto;
+        height: 100px;
         img{
            width:auto;
            height:100%;
         }
     }
     &__flag{
-        @include padding($top:32px);
-        @include font-style1(#999999);
+        padding-top:32px;
+        font:18px $font-family;
+        text-align: center;
+        letter-spacing: 0;
+        color:#999999;
     }
     &__logo{
         @extend %icons;
@@ -542,8 +723,8 @@
     } 
       
     &__text{
-    @include padding($top:15px,$bottom:20px);
-
+        padding-top:15px;
+        padding-bottom: 20px;
 }
 }
 
@@ -553,68 +734,67 @@
 
 .article{
     background-color:#f3f3f3;
-    @include cardstext;
     text-align: center;
 
-    &__allcards{
-        @include cards('article__category'); 
-        @include padding($top:120px);
-        .article__category{
-            @include mq("md",max){
-                @include size(100%,$max-width:500px);
-            }
-            @include mq("sm",max){
-                @include size(100%,$max-width:500px);
-            }
-        }
-     
-  
-    }
-    &__image{
-        img{
-        @extend %image;
-          }
+    &__cards{
+        padding-top: 120px;
+        font-size: 0;
     }
     &__category{
-        text-align: left;
+     width:calc(90%/3);
+     display: inline-block;
+     background-color:#fafafa;
+     margin:10px;
+     @include border($rad:4px);
+     @include transition;
+     cursor: pointer;
+     text-align: left;
+        @include mq("md",max){
+            width:100%;
+            max-width:500px;
+        } 
     }
     &__content{
-        @include padding($total:20px);
+        padding:20px;
 
         h4{
-            @include base($font-family,26px,500,#111111,0,left);
-            @include margin($top:16px);
+            font:500 26px $font-family;
+            letter-spacing: 0;
+            text-align: left;
+            color:$black;
+            margin-top:16px;
             min-height:150px;
             @include mq("lg",max){
-                @include base($font-siz:24px);
+                font-size:24px;
                 min-height:100px;
             }
             @include mq("md",max){
-                @include base($font-siz:24px);
                 min-height: 50px;
             }
 
         }
     }
     .btn--primary{
-        @include base($font-siz:13px,$font-weigh:400,$letter-spac:0);
-        @include padding($value1:8px,$value2:14px);
+        font:13px $font-family;
+        letter-spacing: 0;
+        padding:8px 14px;
         display: inline-block;
     }
   
     &__img{
         display: inline-block;
-        @include margin($top:50px);
-       @include base($font-family,$font-siz:14px,$letter-spac:1px,$color:#111111);
+        margin-top:50px;
+        font:14px $font-family;
+        letter-spacing: 1px;
+        color:$black;
         span{
             @extend %icons;
             vertical-align: top;
-          
         } 
        
     }
     .btn--black{
-        @include margin($top:120px);
+        margin-top:120px;
     }
 }
 
@@ -623,57 +803,70 @@
     @include backgroundimg('/src/images/testimonials-bg-1_2022-04-13/testimonials-bg-1.png');
 
     &__details{
-        @include padding($total:100px);
+        padding:100px;
         @include mq("md",max){
-            @include padding($total:30px);
+            padding: 30px;
             text-align: center;
         }
     }
     &__subhead{
-        @include base($font-family,$font-siz:14px,$letter-spac:2px,$color:#f4f4f4);
-     
+        font:14px $font-family;
+        letter-spacing: 2px;
+        color:$text-white; 
     }
     &__head{
-        @include base($font-family,56px,400,$white,0);
-        @include margin($bottom:108px);
+        color:$white;
+        letter-spacing: 0;
+        font:56px $font-family;
+        margin-bottom:108px;
         span{
-            @include base($font-weigh:500);
+            font-weight: 500;
         }
         @include mq("md",max){
-            @include base($font-siz:54px);
+            font-size:54px;
         }
        
     }
     &__content{
-        @include base($font-family,30px,500,#f4f4f4,1px);
+        font:500 30px $font-family;
+        color:$text-white;
+        letter-spacing: 1px;
         line-height: 48px;
         @include mq("md",max){
-            @include base($font-siz:25px);
+            font-size: 25px;
             line-height: 40px;
         }
     }
     &__clients{
-        @include padding($top:59px);
+        padding-top: 59px;
     }
     &__img{
-        @include inlin-block;
-        @include size(90px,70px); 
-        @include padding($left:7px,$right:7px);
-
+        display:inline-block;
+        vertical-align:middle;
+        width:90px;
+        height:70px;
+        padding-left: 7px;
+        padding-right: 7px;
+    
         img{
-            @include size(100%,100%);
+          width:100%;
+          height:100%;
            @include border($rad:50%);
           
         }
     }
     &__client{
-       @include inlin-block;
-       
+        display:inline-block;
+        vertical-align:middle;
         :first-child{
-          @include base($font-family,24px,500,#f4f4f4,0.8px);  
+            font:500 24px $font-family;
+            letter-spacing: 0.8px;
+            color:$text-white;
         }
         :last-child{
-            @include base($font-family,15px,400,#afafaf,0.5px);  
+            font:15px $font-family;
+            color:#fafafa;
+            letter-spacing: 0.5px;
           }
     }
 }
@@ -682,49 +875,59 @@
 
 .values{
     text-align: center;
+
     &__allcards{
-        @include cards('values__card');
-        @include padding($top:120px,$bottom:63px);
-      
-        .values__card{
-            
-            @include mq("lg",max){
-                @include size(100%,$max-width:500px);
-                @include margin($top:0,$bottom:20px,$right:0,$left:0);
-              
+        padding-top: 120px;
+        font-size: 0;
+        padding-bottom:63px;
+    }
+    &__card{
+     width:calc(90%/3);
+     display: inline-block;
+     background-color:#fafafa;
+     margin:10px;
+     @include border($rad:4px);
+     @include transition;
+     box-shadow: 0 0 90px 0 rgba(41, 44, 28, 0.08);
+     padding: 20px;
+     min-height: 340px;
+     cursor: pointer;
+        @include mq("lg",max){
+            width:100%;
+            max-width: 500px;
+            margin:0 0 20px 0;
+          
+        }
+        h5{
+            font:28px/36px $font-family;
+            color:$black;
+            letter-spacing: 0;
+            text-align: left;
+            margin-top:19px;
+            min-height: 70px;
+            @include mq("xl",max){
+                font-size:20px;
             }
         }
+        p{
+            font:16px/28px $font-family;
+            color:#999999;
+            letter-spacing: 0;
+            text-align: left;
+            margin-top:21px;
+        }
     }
+
     &__img{
         text-align: left;
-        @include size(45px,45px);  
+        width:45px;
+        height:45px;
         img{
-            @extend %image;
             vertical-align:bottom;
         }
       
     }
-    &__card{
-        box-shadow: 0 0 90px 0 rgba(41, 44, 28, 0.08);
-        @include padding($total:20px);
-        min-height: 340px;
-
-        h5{
-            @include base($font-family,28px,400,#111111,0,left);
-            line-height: 36px;
-            @include margin($top:19px);
-            min-height: 70px;
-            @include mq("xl",max){
-                @include base($font-siz:20px);
-            }
-        }
-        p{
-            @include base($font-family,16px,400,#999999,0,left);
-            @include margin($top:21px);
-            line-height: 28px;
-           
-        }
-    }
+       
 }
 
 
