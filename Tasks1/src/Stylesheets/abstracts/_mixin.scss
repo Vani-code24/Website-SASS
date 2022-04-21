@@ -5,16 +5,16 @@
 @mixin mq($width,$type:min){
     @if map_has_key($breakpoints,$width){
         $width:map-get($breakpoints,$width);
-        @if $type==max{
-            $width:$width;
-        }
+        // @if $type==max{
+        //     $width:$width;
+        // }
         @media only screen and (#{$type}-width:$width) {
                 @content;
         }
     }
 }
 
-@mixin center($max-width:1200px,$margin:0 auto){
+@mixin center($max-width:980px,$margin:0 auto){
     max-width:$max-width;
     margin:$margin;
 }
@@ -22,13 +22,11 @@
 
 //interpolation
 @mixin widthcalc($child:null,$perc:null,$no:null,$height:null){
-    $wide:calc($perc/$no);
-    $high:$height;
-        font-size:0;
+    font-size:0;
     .#{$child}{
-        width:$wide;
+        width:calc($perc/$no);
         display:inline-block;
-        height:$high;
+        height:$height;
     }
 }
 
@@ -42,45 +40,56 @@
 }
 
 
-@mixin position($pos:absolute,$content:null,$disp:null,$top:null,$left:null,$right:null,$bottom:null){
-    content:$content;
-    position:$pos;
-    display:$disp;
-    top:$top;
-    left:$left;
-    right:$right;
-    bottom:$bottom;
-    
+@mixin backgroundimg($url){
+    background-image: url($url);
+    min-height:670px;
+    background-position: center;
+    background-size:cover;
+    width:100%;
+    position:relative;
+    @content;
 }
 
-@mixin psuedo($color,$psued:after,$top:null,$left:null,$right:null,$bottom:null){
-    &::#{$psued}{
-        @include position($content: "",$top:$top,$right:$right,$left:$left,$bottom:$bottom);
-        @include size(100%,100%);
-         background-color: $color;  
-         @content;
+@mixin transition($backgclr:null,$color:null){
+    transition:all 0.5s ease-in-out;
+    &:hover{
+        background-color: $backgclr;
+        box-shadow: $color-shadow;
+        color:$color;
     }
+}
+
+@mixin border($bord:null,$rad:null){
+    border:$bord;
+    border-radius:$rad;
+}
+
+@mixin cont-center($left:null){
+    position: absolute;
+    top:50%;
+    left:$left;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+}
+// @mixin psuedo($color,$psued:after,$top:null,$left:null,$right:null,$bottom:null){
+//     &::#{$psued}{
+//         position:absolute;
+//         content: "";
+//         $top:$top;
+//         $right:$right;
+//         $left:$left;
+//         $bottom:$bottom;
+//         width:100%;
+//         height:100%;
+//          background-color: $color;  
+//          @content;
+//     }
   
-}
+// }
 
-//padding  & margin
-@mixin padding($top:null,$right:null,$bottom:null,$left:null,$total:null,$value1:null,$value2:null){
-    padding-top: $top;
-  padding-right: $right;
-  padding-bottom: $bottom;
-  padding-left: $left;
-  padding:$total;
-  padding:$value1 $value2
-}
 
-@mixin margin($top:null, $right:null, $bottom:null, $left:null,$total:null,$value1:null,$value2:null) {
-    margin-top: $top;
-    margin-right: $right;
-    margin-bottom: $bottom;
-    margin-left: $left;
-    margin:$total;
-    margin:$value1 $value2;
-  }
+
+
 
 // @mixin theme($name, $color) {
 //     // Define colors in your theme
@@ -105,165 +114,127 @@
 //   }
 
 
-@mixin base($font-family:null,$font-siz:null,$font-weigh:null,$color:null,$letter-spac:null,$align:null){
-    font-family: $font-family;
-    font-size: $font-siz;
-    font-weight: $font-weigh;
-    color:$color;
-    letter-spacing:$letter-spac;
-    text-align: $align;
-}
+// @mixin base($font-family:null,$font-siz:null,$font-weigh:null,$color:null,$letter-spac:null,$align:null){
+//     font-family: $font-family;
+//     font-size: $font-siz;
+//     font-weight: $font-weigh;
+//     color:$color;
+//     letter-spacing:$letter-spac;
+//     text-align: $align;
+// }
 
-@mixin dropdowns{
-    @include position($disp:none,$top:20px,$left:10px);
-    background-color:$color-warning;
-   transition: all 0.5s ease-in;
-    z-index:100;
-    width:100%;
-    & li{
-        @include padding($value1:10px,$value2:30px);
+// @mixin dropdowns{
+//     @include position($disp:none,$top:20px,$left:10px);
+//     background-color:$color-btn-orange;
+//    transition: all 0.5s ease-in;
+//     z-index:100;
+//     width:100%;
+//     & li{
+//         padding:10px 30px;
         
-        a{
-            color:$white;
-        }
-        &:hover{
-            background-color: red;
-        }
-    }
-   }   
+//         a{
+//             color:$white;
+//         }
+//         &:hover{
+//             background-color: red;
+//         }
+//     }
+//    }   
 
-@mixin inlin-block{
-    display:inline-block;
-    vertical-align:middle;
-}
+// @mixin psuedocoloreffect{
+//     &::before{
+//         @include position($content:"",$top:0,$left:0);
+//         background-color: rgba(0, 0, 0, 0.3);
+//         width:100%;
+//         height: 100%;
+//     }
+// }
 
-@mixin psuedocoloreffect{
-    &::before{
-        @include position($content:"",$top:0,$left:0);
-        background-color: rgba(0, 0, 0, 0.3);
-        width:100%;
-        height: 100%;
-    }
-}
-
-@mixin size($width:null,$height:null,$max-width:null,$min-width:null,$displ:null){
-    width:$width;
-    height:$height;
-    max-width: $max-width;
-    min-width: $min-width;
-    display:$displ;
-}
-
-@mixin border($bord:null,$rad:null){
-    border:$bord;
-    border-radius:$rad;
-}
-
-@mixin cards($name){
-    @include widthcalc($name,90%,3);
-    text-align:center;
-
-    .#{$name}{
-        background-color: $white;
-        @include margin($total:10px);
-        @include border($rad:4px);
-        @include transition;
-        cursor: pointer;
-    }
-} 
-
-@mixin transition($backgclr:null,$color:null){
-    transition:all 0.5s ease-in-out;
-    &:hover{
-        background-color: $backgclr;
-        box-shadow: $color-shadow;
-        color:$color;
-    }
-}
+// @mixin size($width:null,$height:null,$max-width:null,$min-width:null,$displ:null){
+//     width:$width;
+//     height:$height;
+//     max-width: $max-width;
+//     min-width: $min-width;
+//     display:$displ;
+// }
 
 
-@mixin backgroundimg($url){
-    background-image: url($url);
-    min-height:670px;
-    background-position: center;
-    background-size:cover;
-    width:100%;
-    @include position(relative);
-    @content;
-}
+// @mixin cards($name){
+//     @include widthcalc($name,90%,3);
+//     text-align:center;
 
-@mixin cont-center($left:null){
-    @include position($top:50%,$left:$left);
-    position:absolute;
-    transform: translate(-50%,-50%);
-    z-index: 100;
-}
+//     .#{$name}{
+//         background-color: $white;
+//         margin:10px;
+//         @include border($rad:4px);
+//         @include transition;
+//         cursor: pointer;
+//     }
+// } 
 
-@mixin font-style1($color){
-    @include base($font-family,18px,400,$color,0,center);
+
+
+
+
+
+// @mixin font-style1($color){
+//     @include base($font-family,18px,400,$color,0,center);
     
 
-}
+// }
 
-@mixin font-style2($color){
-    @include base($font-family,36px,400,$color,0.2,center);
+// @mixin font-style2($color){
+//     @include base($font-family,36px,400,$color,0.2,center);
 
-}
+// }
 
-@mixin font-style3($color){
-    @include base($font-family,16px,400,$color,0,center);
-}
-
-
-@mixin cardstext{
- &__name{
-        @include font-style2(#111111);
-        @include margin($top:15px);
-    }
-&__text{
-    @include font-style1(#636363);
-    @include padding($top:15px);
-}
-}
-
-@mixin cardformat($bg:null,$name){
-    background-color: $bg;
-    @include cardstext;
-    &__allcards{
-        @include cards($name);
-    }
-}
-
-@mixin featuresicn{
-    @include size(30px,30px);
-    @extend %icons;
-    @include margin($right:8px);
-    float:right;
-    @include padding($total:8px);
-    background-color: #000000;
-}
+// @mixin font-style3($color){
+//     @include base($font-family,16px,400,$color,0,center);
+// }
 
 
-@mixin features__icon($color,$displ:null){
-    @include base($font-family,14px,400,$color,0,left);
-    
-     img{
-        @extend %image;
-         vertical-align: middle;
+// @mixin cardstext{
+//  &__name{
+//      font:36px $font-family;
+//      color:$black;
+//      letter-spacing: 0.2px;
+//      text-align: center;
+//     margin-top:15px;
+//     }
+// &__text{
+//     font:18px $font-family;
+//     color:#636363;
+//     letter-spacing: 0;
+//     text-align: center;
+//     padding-top:15px;
+// }
+// }
 
-     }
-     span{
-         @include size(15px,15px);
-         display: inline-block;
+
+
+
+// @mixin features__icon($color,$displ:null){
+//     font:14px $font-family;
+//     color:$color;
+//     letter-spacing: 0;
+//     text-align: left;
+//      img{
+//          vertical-align: middle;
+
+//      }
+//      span{
+//          width:15px;
+//          height:15px;
+//          display: inline-block;
        
-     }
+//      }
     
- }
+//  }
 
 
  @mixin links{
     transition:all 0.5s ease-out;
      &:hover{
-        color:crimson;
+        color:#2a41e8;
      }
  }

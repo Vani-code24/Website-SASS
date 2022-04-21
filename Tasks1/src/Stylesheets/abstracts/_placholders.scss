@@ -11,30 +11,19 @@
 }
 
 %btn{
-    @include base($font-family,16px,500,#fff,1px);
+    font:500 16px $font-family;
+    color:$color-text;
+    letter-spacing: 1px; 
     @include border($rad:4px);
     @include transition($backgclr:$gray);
 
 }
 
-%image{
-    width:100%;
-    height:auto;
-}
 
 %icons{
-    @include size(17px,17px);
+    width:17px;
+    height:17px;
     display: inline-block;
-    img{
-        @extend %image;
-    }
 }
 
-
-
-        %img{
-            img{
-                @extend %image;
-                vertical-align: bottom;
-                }
-        }
+   
