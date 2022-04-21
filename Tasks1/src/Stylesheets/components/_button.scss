@@ -5,35 +5,34 @@
 .btn{
     &--orange{
         @extend %btn;
-        background-color:$color-warning;
-        @include padding($total:36px);
+        background-color:$color-btn-orange;
+        padding:36px;
     }
     &--primary{
         @extend %btn;
         background-color:$color-primary;
-        @include padding($value1:24px,$value2:29px);
+        padding:24px 29px;
         vertical-align: top;
         display: inline-block;
-       
-      
     }
     &--black{
         @extend %btn;
         @include border($rad:29px);
         letter-spacing: 2px;
-        background-color: #000000;
-        @include padding($value1:20px,$value2:30px);
+        background-color: $color-text-dark;
+        padding:20px 30px;
         display: inline-block;
         @include mq('sm',max){
-            @include base($font-siz:16px);
-            @include padding($value1:18px,$value2:24px);
+            font-size: 16px;
+            padding:18px 24px;
         }
     }
     &--light{
         display: inline-block;
         @extend %btn;
-        @include base($font-weigh:400,$letter-spac:0,$color:#2a41e8);
+        letter-spacing:0;
+        color:$color-btn-primary;
         background-color: #eaedfd;
-        @include padding($value1:15px,$value2:20px);
+        padding:15px 20px;
     }
 }
