@@ -15,21 +15,42 @@
     <body>
         <header class="header">
             <a href="javascript:void(0);" class="header__logo">
-                <img src="./src/images/logo (1).svg" alt="logo" class="logo__img">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="179" height="41" viewbox="0 0 179 41">
+                    <defs>
+                        <path id="a" d="M0 .117h35.952V41H0z"/>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd">
+                        <path fill="#2A42E8" d="M23.698 19.044l-5.093-2.885a1.23 1.23 0 0 0-1.21 0l-5.093 2.885a.591.591 0 0 0-.302.514v5.849c0 .327.27.593.605.593h2.639a.599.599 0 0 0 .604-.593v-3.66a.6.6 0 0 1 .605-.594h3.094a.6.6 0 0 1 .605.594v3.66c0 .327.27.593.604.593h2.64a.599.599 0 0 0 .604-.593v-5.849a.591.591 0 0 0-.302-.514"/>
+                        <g>
+                            <mask id="b" fill="#fff">
+                                <use xlink:href="#a"/>
+                            </mask>
+                            <path fill="#2A42E8" d="M28.989 19.13v6.241c0 .43-.227.826-.596 1.04l-4.477 2.608-5.358 3.121a1.183 1.183 0 0 1-1.19 0l-5.358-3.12v-.016l-4.451-2.593a1.204 1.204 0 0 1-.596-1.04v-8.705c0-.43.227-.826.596-1.04l4.762-2.775a1.181 1.181 0 0 1 1.19 0l3.87 2.254c.368.215.822.215 1.19 0l3.87-2.254a1.182 1.182 0 0 1 1.19 0l4.762 2.774c.369.215.596.612.596 1.04v2.465zm5.363-9.974L19.576.55a3.176 3.176 0 0 0-3.2 0L1.6 9.156A3.234 3.234 0 0 0 0 11.952v17.213c0 1.153.61 2.22 1.6 2.796l14.776 8.606c.99.577 2.21.577 3.2 0l14.776-8.606a3.234 3.234 0 0 0 1.6-2.796V11.952c0-1.153-.61-2.219-1.6-2.796z" mask="url(#b)"/>
+                        </g>
+                        <text fill="#4B4D4F" font-family="Rubik-Light, Rubik" font-size="28" font-weight="300" transform="translate(-.102)">
+                            <tspan x="48.102" y="30">
+                                casa
+                            </tspan>
+                            <tspan x="106.902" y="30" font-family="Rubik-Medium, Rubik" font-weight="400">
+                                Royal
+                            </tspan>
+                        </text>
+                    </g>
+                </svg>
             </a>
-
             <nav class="header__nav">
-                <div class="hamburger">
+                <input class="menu-btn" type="checkbox" id="menu-btn1"/>
+                <label class="menu-icon" for="menu-btn1">
                     <span class="bar"></span>
-                </div>
+                </label>
                 <ul class="header__list">
-                    <li class="header__lists icon-dropdown">
-                        <a href="javascript:void(0);" class="header--links">
-                            HOMEPAGE
-                        </a>
-                        <a class="icn">
-                            <img src="/src/images/icons8-down-arrow-32.png">
-                        </a>
+                    <li class="icon-dropdown header--links">
+                        HOMEPAGE
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" viewbox="0 0 199.404 199.404" style="enable-background:new 0 0 199.404 199.404;" xml:space="preserve">
+                            <g>
+                                <polygon points="199.404,63.993 171.12,35.709 99.702,107.127 28.284,35.709 0,63.993 99.702,163.695 	"/>
+                            </g>
+                        </svg>
 
                         <ul class="dropdowns">
                             <li>
@@ -49,13 +70,13 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="header__lists icon-dropdown">
-                        <a href="javascript:void(0);" class="header--links">
-                            PROPERTIES
-                        </a>
-                        <a class="icn">
-                            <img src="/src/images/icons8-down-arrow-32.png">
-                        </a>
+                    <li class="icon-dropdown header--links">
+                        PROPERTIES
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" viewbox="0 0 199.404 199.404" style="enable-background:new 0 0 199.404 199.404;" xml:space="preserve">
+                            <g>
+                                <polygon points="199.404,63.993 171.12,35.709 99.702,107.127 28.284,35.709 0,63.993 99.702,163.695 	"/>
+                            </g>
+                        </svg>
 
                         <ul class="dropdowns">
                             <li>
@@ -86,21 +107,27 @@
                         </a>
                     </li>
                 </ul>
+
                 <ul class="header__icons">
-                    <li class="header--links">
-                        <a>
-                            Compare
+                    <li class="header__lists">
+                        <a href="javascript:void(0);" class="header--links">
+                            COMPARE
                         </a>
                     </li>
-                    <li class="header--links">
-                        <a href="javascript:void(0);" class="check__icon">
-                            <img src="./src/images/Tick.png" alt="icon">
-                        </a>
+                    <li class="header--links check__icon">
+                        <svg width="30px" height="30px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 311.539 311.539" style="enable-background:new 0 0 311.539 311.539;" xml:space="preserve">
+                            <g>
+                                <polygon points="214.696,98.019 132.761,179.955 95.716,142.908 67.43,171.193 132.761,236.523 242.981,126.305 	"/>
+                                <path d="M155.77,0C69.74,0,0,69.74,0,155.77s69.74,155.77,155.77,155.77s155.77-69.74,155.77-155.77S241.799,0,155.77,0zM155.77,271.539C91.784,271.539,40,219.761,40,155.77C40,91.784,91.778,40,155.77,40c63.986,0,115.77,51.778,115.77,115.77C271.539,219.755,219.761,271.539,155.77,271.539z"/>
+                            </g>
+                        </svg>
                     </li>
-                    <li class="header--links">
-                        <a href="javascript:void(0);" class="heart__icon">
-                            <img src="/src/images/like (2).png">
-                        </a>
+                    <li class="header--links heart__icon">
+                        <svg width="14px" height="14px" viewbox="0 -2 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <g id="Lager_102" data-name="Lager 102" transform="translate(-3)">
+                                <path id="Path_100" data-name="Path 100" d="M26,4c2.757,0,5,2.692,5,6,0,6.308-7.637,11.425-12,13.6C14.632,21.422,7,16.307,7,10c0-3.308,2.243-6,5-6a5.033,5.033,0,0,1,3.765,2.353l1.618,1.772a2,2,0,0,0,3.234,0l1.618-1.772A5.033,5.033,0,0,1,26,4m0-4a8.961,8.961,0,0,0-7,4,8.961,8.961,0,0,0-7-4C7.029,0,3,4.477,3,10,3,21.438,19,28,19,28s16-6.562,16-18c0-5.523-4.029-10-9-10Z" fill="#040405"/>
+                            </g>
+                        </svg>
                     </li>
                     <li class="header--links">
                         <a href="javascript:void(0);" class="btn btn--orange">
@@ -108,95 +135,91 @@
                         </a>
                     </li>
                 </ul>
-
             </nav>
         </header>
         <main>
             <section class="hero">
-                <div class="container">
-                    <div class="hero__container">
-                        <div class="hero__content">
-                            <h1 class="hero__header">
-                                Let Us Guide You Home
-                            </h1>
-                            <p class="hero__subhead">
-                                Find the house of your dreams
-                            </p>
-                        </div>
-                        <div class="hero__inputs">
-                            <ul class="hero__dropdown1 icon-dropdown">
-                                <li class="dropdown__header">
-                                    Type
-                                </li>
-                                <li>
-                                    <a class="text">
-                                        Select Type
-                                    </a>
-                                    <a class="icn hero--icn">
-                                        <img src="/src/images/icons8-down-arrow-32.png">
-                                    </a>
-
-                                    <ul class="dropdowns">
-                                        <li>
-                                            <a href="#">
-                                                Sub-1
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Sub-2
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Sub-3
-                                            </a>
-                                        </li>
-                                    </ul>
-
-                                </li>
-
-                            </ul>
-                            <ul class=" hero__dropdown2 icon-dropdown">
-                                <li class="dropdown__header">
-                                    Status
-                                </li>
-                                <li>
-                                    <a class="text">
-                                        Select Status
-                                    </a>
-                                    <a class="icn hero--icn">
-                                        <img src="/src/images/icons8-down-arrow-32.png">
-                                    </a>
-
-                                    <ul class="dropdowns">
-                                        <li>
-                                            <a href="#">
-                                                Sub-1
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Sub-2
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Sub-3
-                                            </a>
-                                        </li>
-                                    </ul>
-
-                                </li>
-
-                            </ul>
-                            <input type="text" placeholder="Search for properties,suburbs or keywords" class="input__text">
-                            <a href="javascript:void(0);" class=" btn--primary">
-                                FIND PROPERTIES
-                            </a>
-                        </div>
+                <div class="hero__container">
+                    <div class="hero__content">
+                        <h1 class="hero__header">
+                            Let Us Guide You Home
+                        </h1>
+                        <p class="hero__subhead">
+                            Find the house of your dreams
+                        </p>
                     </div>
+                    <div class="hero__inputs">
+                        <div class="hero__dropdown1 icon-dropdown">
+                            <span class="dropdown__header">
+                                Type
+                            </span>
+                            <br>
+                            <span class="text">
+                                Select Type
+                            </span>
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" viewbox="0 0 199.404 199.404" style="enable-background:new 0 0 199.404 199.404;float:right;" xml:space="preserve">
+                                <g>
+                                    <polygon points="199.404,63.993 171.12,35.709 99.702,107.127 28.284,35.709 0,63.993 99.702,163.695 	"/>
+                                </g>
+                            </svg>
 
+                            <ul class="dropdowns">
+                                <li>
+                                    <a href="#">
+                                        Sub-1
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Sub-2
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Sub-3
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="hero__dropdown2 icon-dropdown">
+                            <span class="dropdown__header">
+                                Status
+                            </span>
+                            <br/>
+                            <span class="text">
+                                Select Status
+                            </span>
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" viewbox="0 0 199.404 199.404" style="enable-background:new 0 0 199.404 199.404;float:right;" xml:space="preserve">
+                                <g>
+                                    <polygon points="199.404,63.993 171.12,35.709 99.702,107.127 28.284,35.709 0,63.993 99.702,163.695 	"/>
+                                </g>
+                            </svg>
+
+                            <ul class="dropdowns">
+                                <li>
+                                    <a href="#">
+                                        Sub-1
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Sub-2
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Sub-3
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <input type="text" placeholder="Search for properties,suburbs or keywords" class="input__text">
+                        <a href="javascript:void(0);" class=" btn--primary">
+                            FIND PROPERTIES
+                        </a>
+                    </div>
                 </div>
             </section>
             <section class="features">
@@ -672,7 +695,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
                         <div class="features__box">
@@ -764,7 +786,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <a href="javascript:void(0);" class="btn--black">
@@ -865,522 +886,519 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="properties">
-            <div class="container">
-                <h4 class="section--subhead">
-                    CASAROYAL REAL ESTATE AGENCY
-                </h4>
-                <h2 class="section--headers">
-                    Properties by
-                    <span>
-                        Area
-                    </span>
-                </h2>
-
-                <div class="properties__box1">
-                    <div class="properties__images properties--image1">
-                        <a class="prop__img">
-                            <img src="/src/images/los-angeles_2022-04-13/los-angeles.png">
-                        </a>
-                        <div class="properties__text">
-                            <h5 class="properties__head">
-                                LOS Angeles
-                            </h5>
-                            <a href="javascript:void(0);" class="properties__subhead">
-
-                                <span class="properties__icon">
-                                    <img src="/src/images/icons8-my-location-24.png" alt="location-icon">
-                                </span>
-                                24 Properties
-                            </a>
-                        </div>
-                    </div>
-                    <div class="properties__images properties--image2">
-                        <a class="prop__img">
-                            <img src="/src/images/san-francisco_2022-04-13/san-francisco.png">
-                        </a>
-                        <div class="properties__text">
-                            <h5 class="properties__head">
-                                San Francisco
-                            </h5>
-                            <a href="javascript:void(0);" class="properties__subhead">
-                                <span class="properties__icon">
-                                    <img src="/src/images/icons8-my-location-24.png" alt="location-icon">
-                                </span>
-                                26 Properties
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="properties__box2">
-                    <div class="properties__images properties--image2">
-                        <a class="prop__img">
-                            <img src="/src/images/seattle_2022-04-13/seattle.png">
-                        </a>
-                        <div class="properties__text">
-                            <h5 class="properties__head">
-                                Seattle
-                            </h5>
-                            <a href="javascript:void(0);" class="properties__subhead">
-                                <span class="properties__icon">
-                                    <img src="/src/images/icons8-my-location-24.png" alt="location-icon">
-                                </span>
-                                13 Properties
-                            </a>
-                        </div>
-                    </div>
-                    <div class="properties__images properties--image1">
-                        <a class="prop__img">
-                            <img src="/src/images/san-diego_2022-04-13/san-diego.png">
-                        </a>
-                        <div class="properties__text">
-                            <h5 class="properties__head">
-                                San Diego
-                            </h5>
-                            <a href="javascript:void(0);" class="properties__subhead">
-
-                                <span class="properties__icon">
-                                    <img src="/src/images/icons8-my-location-24.png" alt="location-icon">
-                                </span>
-                                1 Property
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="agents">
-            <div class="container">
-                <h4 class="section--subhead">
-                    MEET OUR TEAM
-                </h4>
-                <h2 class="section--headers">
-                    Our
-                    <span>
-                        Agents
-                    </span>
-                </h2>
-                <div class="agents__cards">
-                    <div class="agents__profile">
-                        <a href="javascript:void(0);" class="agents__img">
-                            <img src="/src/images/agent-image_2022-04-13/agent-image.png" alt="agent-image" class="agents__image">
-                        </a>
-                        <div class="agents__details">
-                            <h5 class="agents__type">
-                                Real Estate Broker
-                            </h5>
-
-                            <h3 class="agents__name">
-                                JOHN DOE
-                            </h3>
-                            <div class="agents__text">
-                                <p>
-                                    123 456 7890
-                                </p>
-                                <p>
-                                    agent@gmail.com
-                                </p>
-                            </div>
-
-                            <div class="social__icon">
-                                <a href="javascript:void(0);" class="social--icons">
-                                    <img src="/src/images/icons8-facebook.svg">
-                                </a>
-                                <a href="javascript:void(0);" class="social--icons">
-                                    <img src="/src/images/icons8-linkedin.svg">
-                                </a>
-                                <a href="javascript:void(0);" class="social--icons">
-                                    <img src="/src/images/icons8-twitter.svg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="agents__profile">
-                        <a href="javascript:void(0);" class="agents__img">
-                            <img src="/src/images/agent-image_2022-04-13 (1)/agent-image.png" alt="agent-image" class="agents__image">
-                        </a>
-                        <div class="agents__details">
-                            <h5 class="agents__type">
-                                Real Estate Broker
-                            </h5>
-                            <h3 class="agents__name">
-                                JANE DOE
-                            </h3>
-                            <div class="agents__text">
-                                <p>
-                                    123 456 7890
-                                </p>
-                                <p>
-                                    agent@gmail.com
-                                </p>
-                            </div>
-                            <div class="social__icon">
-                                <a href="javascript:void(0);" class="social--icons">
-                                    <img src="/src/images/icons8-facebook.svg">
-                                </a>
-                                <a href="javascript:void(0);" class="social--icons">
-                                    <img src="/src/images/icons8-linkedin.svg">
-                                </a>
-                                <a href="javascript:void(0);" class="social--icons">
-                                    <img src="/src/images/icons8-twitter.svg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="agents__profile">
-                        <a href="javascript:void(0);" class="agents__img">
-                            <img src="/src/images/agent-image_2022-04-13 (2)/agent-image.png" alt="agent-image" class="agents__image">
-                        </a>
-                        <div class="agents__details">
-                            <h5 class="agents__type">
-                                Real Estate Broker
-                            </h5>
-                            <h3 class="agents__name">
-                                JOHN DOE
-                            </h3>
-                            <div class="agents__text">
-                                <p>
-                                    123 456 7890
-                                </p>
-                                <p>
-                                    agent@gmail.com
-                                </p>
-                            </div>
-                            <div class="social__icon">
-                                <a href="javascript:void(0);" class="social--icons">
-                                    <img src="/src/images/icons8-facebook.svg">
-                                </a>
-                                <a href="javascript:void(0);" class="social--icons">
-                                    <img src="/src/images/icons8-linkedin.svg">
-                                </a>
-                                <a href="javascript:void(0);" class="social--icons">
-                                    <img src="/src/images/icons8-twitter.svg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="sale">
-            <div class="container">
-                <div class="sale__content">
-                    <h5>
-                        Want to Sell                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Property?
-                    </h5>
-                    <p>
-                        Let us create a tailored strategic marketing plan and keep
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                track of the selling process.
-                    </p>
-                    <a href="javascript:void(0)" class="btn--black">
-                        MORE DETAILS
-                        <span class="right-icon">
-                            <img src="/src/images/right-arrow.png" alt="right-icon">
+            </section>
+            <section class="properties">
+                <div class="container">
+                    <h4 class="section--subhead">
+                        CASAROYAL REAL ESTATE AGENCY
+                    </h4>
+                    <h2 class="section--headers">
+                        Properties by
+                        <span>
+                            Area
                         </span>
+                    </h2>
+                    <div class="properties__box1">
+                        <div class="properties__images properties--image1">
+                            <a class="prop__img">
+                                <img src="/src/images/los-angeles_2022-04-13/los-angeles.png">
+                            </a>
+                            <div class="properties__text">
+                                <h5 class="properties__head">
+                                    LOS Angeles
+                                </h5>
+                                <a href="javascript:void(0);" class="properties__subhead">
+
+                                    <span class="properties__icon">
+                                        <img src="/src/images/icons8-my-location-24.png" alt="location-icon">
+                                    </span>
+                                    24 Properties
+                                </a>
+                            </div>
+                        </div>
+                        <div class="properties__images properties--image2">
+                            <a class="prop__img">
+                                <img src="/src/images/san-francisco_2022-04-13/san-francisco.png">
+                            </a>
+                            <div class="properties__text">
+                                <h5 class="properties__head">
+                                    San Francisco
+                                </h5>
+                                <a href="javascript:void(0);" class="properties__subhead">
+                                    <span class="properties__icon">
+                                        <img src="/src/images/icons8-my-location-24.png" alt="location-icon">
+                                    </span>
+                                    26 Properties
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="properties__box2">
+                        <div class="properties__images properties--image2">
+                            <a class="prop__img">
+                                <img src="/src/images/seattle_2022-04-13/seattle.png">
+                            </a>
+                            <div class="properties__text">
+                                <h5 class="properties__head">
+                                    Seattle
+                                </h5>
+                                <a href="javascript:void(0);" class="properties__subhead">
+                                    <span class="properties__icon">
+                                        <img src="/src/images/icons8-my-location-24.png" alt="location-icon">
+                                    </span>
+                                    13 Properties
+                                </a>
+                            </div>
+                        </div>
+                        <div class="properties__images properties--image1">
+                            <a class="prop__img">
+                                <img src="/src/images/san-diego_2022-04-13/san-diego.png">
+                            </a>
+                            <div class="properties__text">
+                                <h5 class="properties__head">
+                                    San Diego
+                                </h5>
+                                <a href="javascript:void(0);" class="properties__subhead">
+
+                                    <span class="properties__icon">
+                                        <img src="/src/images/icons8-my-location-24.png" alt="location-icon">
+                                    </span>
+                                    1 Property
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="agents">
+                <div class="container">
+                    <h4 class="section--subhead">
+                        MEET OUR TEAM
+                    </h4>
+                    <h2 class="section--headers">
+                        Our
+                        <span>
+                            Agents
+                        </span>
+                    </h2>
+                    <div class="agents__cards">
+                        <div class="agents__profile">
+                            <a href="javascript:void(0);" class="agents__img">
+                                <img src="/src/images/agent-image_2022-04-13/agent-image.png" alt="agent-image" class="agents__image">
+                            </a>
+                            <div class="agents__details">
+                                <h5 class="agents__type">
+                                    Real Estate Broker
+                                </h5>
+
+                                <h3 class="agents__name">
+                                    JOHN DOE
+                                </h3>
+                                <div class="agents__text">
+                                    <p>
+                                        123 456 7890
+                                    </p>
+                                    <p>
+                                        agent@gmail.com
+                                    </p>
+                                </div>
+
+                                <div class="social__icon">
+                                    <a href="javascript:void(0);" class="social--icons">
+                                        <img src="/src/images/icons8-facebook.svg">
+                                    </a>
+                                    <a href="javascript:void(0);" class="social--icons">
+                                        <img src="/src/images/icons8-linkedin.svg">
+                                    </a>
+                                    <a href="javascript:void(0);" class="social--icons">
+                                        <img src="/src/images/icons8-twitter.svg">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agents__profile">
+                            <a href="javascript:void(0);" class="agents__img">
+                                <img src="/src/images/agent-image_2022-04-13 (1)/agent-image.png" alt="agent-image" class="agents__image">
+                            </a>
+                            <div class="agents__details">
+                                <h5 class="agents__type">
+                                    Real Estate Broker
+                                </h5>
+                                <h3 class="agents__name">
+                                    JANE DOE
+                                </h3>
+                                <div class="agents__text">
+                                    <p>
+                                        123 456 7890
+                                    </p>
+                                    <p>
+                                        agent@gmail.com
+                                    </p>
+                                </div>
+                                <div class="social__icon">
+                                    <a href="javascript:void(0);" class="social--icons">
+                                        <img src="/src/images/icons8-facebook.svg">
+                                    </a>
+                                    <a href="javascript:void(0);" class="social--icons">
+                                        <img src="/src/images/icons8-linkedin.svg">
+                                    </a>
+                                    <a href="javascript:void(0);" class="social--icons">
+                                        <img src="/src/images/icons8-twitter.svg">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agents__profile">
+                            <a href="javascript:void(0);" class="agents__img">
+                                <img src="/src/images/agent-image_2022-04-13 (2)/agent-image.png" alt="agent-image" class="agents__image">
+                            </a>
+                            <div class="agents__details">
+                                <h5 class="agents__type">
+                                    Real Estate Broker
+                                </h5>
+                                <h3 class="agents__name">
+                                    JOHN DOE
+                                </h3>
+                                <div class="agents__text">
+                                    <p>
+                                        123 456 7890
+                                    </p>
+                                    <p>
+                                        agent@gmail.com
+                                    </p>
+                                </div>
+                                <div class="social__icon">
+                                    <a href="javascript:void(0);" class="social--icons">
+                                        <img src="/src/images/icons8-facebook.svg">
+                                    </a>
+                                    <a href="javascript:void(0);" class="social--icons">
+                                        <img src="/src/images/icons8-linkedin.svg">
+                                    </a>
+                                    <a href="javascript:void(0);" class="social--icons">
+                                        <img src="/src/images/icons8-twitter.svg">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sale">
+                <div class="container">
+                    <div class="sale__content">
+                        <h5>
+                            Want to Sell                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Property?
+                        </h5>
+                        <p>
+                            Let us create a tailored strategic marketing plan and keep
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        track of the selling process.
+                        </p>
+                        <a href="javascript:void(0)" class="btn--black">
+                            MORE DETAILS
+                            <span class="right-icon">
+                                <img src="/src/images/right-arrow.png" alt="right-icon">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="agencies">
+                <div class="container">
+                    <h4 class="section--subhead">
+                        MEET OUR TEAM
+                    </h4>
+                    <h2 class="section--headers">
+                        Real Estate
+                        <span>
+                            Agencies
+                        </span>
+                    </h2>
+                    <div class="agencies__allcards">
+                        <div class="agencies__cards">
+                            <div class="agencies__icn">
+                                <a class="agencies__icon1">
+                                    <span>
+                                        <img src="/src/images/verified-icon.svg">
+                                    </span>
+                                    Verified
+                                </a>
+                                <a class="agencies__icon2">
+                                    <span>
+                                        <img src="/src/images/star.png">
+                                    </span>
+                                    4.5
+                                </a>
+                            </div>
+                            <div class="agencies__content">
+                                <div class="agencies__img">
+                                    <img src="/src/images/logo_2022-04-13/logo.png">
+                                </div>
+                                <div class="agencies__flag">
+                                    <span class="agencies__logo">
+                                        <img src="/src/images/flag.svg">
+                                    </span>
+                                    San Francisco, USA
+                                </div>
+                                <h4 class="agencies__name">
+                                    ProHouse
+                                </h4>
+                                <div class="agencies__text">
+                                    <p>
+                                        123 456 7890
+                                    </p>
+                                    <p>
+                                        agency@email.com
+                                    </p>
+                                </div>
+                                <a href="javascript:void(0);" class="btn--light">
+                                    3 Properties
+                                </a>
+                            </div>
+                        </div>
+                        <div class="agencies__cards">
+                            <div class="agencies__icn">
+                                <a class="agencies__icon1">
+                                    <span>
+                                        <img src="/src/images/verified-icon.svg">
+                                    </span>
+                                    Verified
+                                </a>
+                                <a class="agencies__icon2">
+                                    <span>
+                                        <img src="/src/images/star.png">
+                                    </span>
+                                    4.5
+                                </a>
+                            </div>
+                            <div class="agencies__content">
+                                <div class="agencies__img">
+                                    <img src="/src/images/logo_2022-04-13 (1)/logo.png">
+                                </div>
+                                <div class="agencies__flag">
+                                    <span class="agencies__logo">
+                                        <img src="/src/images/flag.svg">
+                                    </span>
+                                    Los Angeles, USA
+                                </div>
+                                <h4 class="agencies__name">
+                                    beHome
+                                </h4>
+                                <div class="agencies__text">
+                                    <p>
+                                        123 456 7890
+                                    </p>
+                                    <p>
+                                        agency@email.com
+                                    </p>
+                                </div>
+                                <a href="javascript:void(0);" class="btn--light">
+                                    3 Properties
+                                </a>
+                            </div>
+                        </div>
+                        <div class="agencies__cards">
+                            <div class="agencies__icn">
+                                <a class="agencies__icon1">
+                                    <span>
+                                        <img src="/src/images/verified-icon.svg">
+                                    </span>
+                                    Verified
+                                </a>
+                                <a class="agencies__icon2">
+                                    <span>
+                                        <img src="/src/images/star.png">
+                                    </span>
+                                    4.5
+                                </a>
+                            </div>
+                            <div class="agencies__content">
+                                <div class="agencies__img">
+                                    <img src="/src/images/logo_2022-04-13 (2)/logo.png">
+                                </div>
+                                <div class="agencies__flag">
+                                    <span class="agencies__logo">
+                                        <img src="/src/images/flag.svg">
+                                    </span>
+                                    Seattle, USA
+                                </div>
+                                <h4 class="agencies__name">
+                                    Alain Doe
+                                </h4>
+                                <div class="agencies__text">
+                                    <p>
+                                        123 456 7890
+                                    </p>
+                                    <p>
+                                        agency@email.com
+                                    </p>
+                                </div>
+                                <a href="javascript:void(0);" class="btn--light">
+                                    3 Properties
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="article">
+                <div class="container">
+                    <h4 class="section--subhead">
+                        CASAROYAL NEWS
+                    </h4>
+                    <h2 class="section--headers">
+                        Articles
+                        <span>
+                            & Tips
+                        </span>
+                    </h2>
+                    <div class="article__allcards">
+                        <div class="article__category">
+                            <div class="article__image">
+                                <img src="/src/images/image_2022-04-13/image.png">
+                            </div>
+                            <div class="article__content">
+                                <a href="javascript:void(0);" class="btn--primary">
+                                    Category
+                                </a>
+                                <h4>
+                                    BUYING A HOME
+                                </h4>
+                                <a href="javascript:void(0);" class="article__img">
+                                    <span>
+                                        <img src="/src/images/icons8-clock.svg">
+                                    </span>
+                                    DECEMBER 28, 2018
+                                </a>
+                            </div>
+                        </div>
+                        <div class="article__category">
+                            <div class="article__image">
+                                <img src="/src/images/image_2022-04-13 (1)/image.png">
+                            </div>
+                            <div class="article__content">
+                                <a href="javascript:void(0);" class="btn--primary">
+                                    Category
+                                </a>
+                                <h4>
+                                    PROS AND CONS ON A COUNTRYSIDE HOUSE
+                                </h4>
+                                <a href="javascript:void(0);" class="article__img">
+                                    <span>
+                                        <img src="/src/images/icons8-clock.svg">
+                                    </span>
+                                    DECEMBER 28, 2018
+                                </a>
+                            </div>
+                        </div>
+                        <div class="article__category">
+                            <div class="article__image">
+                                <img src="/src/images/image_2022-04-13 (2)/image.png">
+                            </div>
+                            <div class="article__content">
+                                <a href="javascript:void(0);" class="btn--primary">
+                                    Category
+                                </a>
+                                <h4>
+                                    BUYING A HOME
+                                </h4>
+                                <a href="javascript:void(0);" class="article__img">
+                                    <span>
+                                        <img src="/src/images/icons8-clock.svg">
+                                    </span>
+                                    DECEMBER 28, 2018
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0);" class="btn--black">
+                        MORE ARTICLES & TIPS
                     </a>
                 </div>
-            </div>
-        </section>
-
-        <section class="agencies">
-            <div class="container">
-                <h4 class="section--subhead">
-                    MEET OUR TEAM
-                </h4>
-                <h2 class="section--headers">
-                    Real Estate
-                    <span>
-                        Agencies
-                    </span>
-                </h2>
-                <div class="agencies__allcards">
-                    <div class="agencies__cards">
-                        <div class="agencies__icn">
-                            <a class="agencies__icon1">
-                                <span>
-                                    <img src="/src/images/verified-icon.svg">
-                                </span>
-                                Verified
-                            </a>
-                            <a class="agencies__icon2">
-                                <span>
-                                    <img src="/src/images/star.png">
-                                </span>
-                                4.5
-                            </a>
-                        </div>
-                        <div class="agencies__content">
-                            <div class="agencies__img">
-                                <img src="/src/images/logo_2022-04-13/logo.png">
-                            </div>
-                            <div class="agencies__flag">
-                                <span class="agencies__logo">
-                                    <img src="/src/images/flag.svg">
-                                </span>
-                                San Francisco, USA
-                            </div>
-                            <h4 class="agencies__name">
-                                ProHouse
-                            </h4>
-                            <div class="agencies__text">
-                                <p>
-                                    123 456 7890
-                                </p>
-                                <p>
-                                    agency@email.com
-                                </p>
-                            </div>
-                            <a href="javascript:void(0);" class="btn--light">
-                                3 Properties
-                            </a>
-                        </div>
-                    </div>
-                    <div class="agencies__cards">
-                        <div class="agencies__icn">
-                            <a class="agencies__icon1">
-                                <span>
-                                    <img src="/src/images/verified-icon.svg">
-                                </span>
-                                Verified
-                            </a>
-                            <a class="agencies__icon2">
-                                <span>
-                                    <img src="/src/images/star.png">
-                                </span>
-                                4.5
-                            </a>
-                        </div>
-                        <div class="agencies__content">
-                            <div class="agencies__img">
-                                <img src="/src/images/logo_2022-04-13 (1)/logo.png">
-                            </div>
-                            <div class="agencies__flag">
-                                <span class="agencies__logo">
-                                    <img src="/src/images/flag.svg">
-                                </span>
-                                Los Angeles, USA
-                            </div>
-                            <h4 class="agencies__name">
-                                beHome
-                            </h4>
-                            <div class="agencies__text">
-                                <p>
-                                    123 456 7890
-                                </p>
-                                <p>
-                                    agency@email.com
-                                </p>
-                            </div>
-                            <a href="javascript:void(0);" class="btn--light">
-                                3 Properties
-                            </a>
-                        </div>
-                    </div>
-                    <div class="agencies__cards">
-                        <div class="agencies__icn">
-                            <a class="agencies__icon1">
-                                <span>
-                                    <img src="/src/images/verified-icon.svg">
-                                </span>
-                                Verified
-                            </a>
-                            <a class="agencies__icon2">
-                                <span>
-                                    <img src="/src/images/star.png">
-                                </span>
-                                4.5
-                            </a>
-                        </div>
-                        <div class="agencies__content">
-                            <div class="agencies__img">
-                                <img src="/src/images/logo_2022-04-13 (2)/logo.png">
-                            </div>
-                            <div class="agencies__flag">
-                                <span class="agencies__logo">
-                                    <img src="/src/images/flag.svg">
-                                </span>
-                                Seattle, USA
-                            </div>
-                            <h4 class="agencies__name">
-                                Alain Doe
-                            </h4>
-                            <div class="agencies__text">
-                                <p>
-                                    123 456 7890
-                                </p>
-                                <p>
-                                    agency@email.com
-                                </p>
-                            </div>
-                            <a href="javascript:void(0);" class="btn--light">
-                                3 Properties
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="article">
-            <div class="container">
-                <h4 class="section--subhead">
-                    CASAROYAL NEWS
-                </h4>
-                <h2 class="section--headers">
-                    Articles
-                    <span>
-                        & Tips
-                    </span>
-                </h2>
-                <div class="article__allcards">
-                    <div class="article__category">
-                        <div class="article__image">
-                            <img src="/src/images/image_2022-04-13/image.png">
-                        </div>
-                        <div class="article__content">
-                            <a href="javascript:void(0);" class="btn--primary">
-                                Category
-                            </a>
-                            <h4>
-                                BUYING A HOME
-                            </h4>
-                            <a href="javascript:void(0);" class="article__img">
-                                <span>
-                                    <img src="/src/images/icons8-clock.svg">
-                                </span>
-                                DECEMBER 28, 2018
-                            </a>
-                        </div>
-                    </div>
-                    <div class="article__category">
-                        <div class="article__image">
-                            <img src="/src/images/image_2022-04-13 (1)/image.png">
-                        </div>
-                        <div class="article__content">
-                            <a href="javascript:void(0);" class="btn--primary">
-                                Category
-                            </a>
-                            <h4>
-                                PROS AND CONS ON A COUNTRYSIDE HOUSE
-                            </h4>
-                            <a href="javascript:void(0);" class="article__img">
-                                <span>
-                                    <img src="/src/images/icons8-clock.svg">
-                                </span>
-                                DECEMBER 28, 2018
-                            </a>
-                        </div>
-                    </div>
-                    <div class="article__category">
-                        <div class="article__image">
-                            <img src="/src/images/image_2022-04-13 (2)/image.png">
-                        </div>
-                        <div class="article__content">
-                            <a href="javascript:void(0);" class="btn--primary">
-                                Category
-                            </a>
-                            <h4>
-                                BUYING A HOME
-                            </h4>
-                            <a href="javascript:void(0);" class="article__img">
-                                <span>
-                                    <img src="/src/images/icons8-clock.svg">
-                                </span>
-                                DECEMBER 28, 2018
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-                <a href="javascript:void(0);" class="btn--black">
-                    MORE ARTICLES & TIPS
-                </a>
-            </div>
-        </section>
-        <section class="values">
-            <div class="container">
-                <h4 class="section--subhead">
-                    CASAROYAL NEWS
-                </h4>
-                <h2 class="section--headers">
-                    Our
-                    <span>
-                        Values
-                    </span>
-                </h2>
-                <div class="values__allcards">
-                    <div class="values__card">
-                        <div class="values__img">
-                            <img src="./src/images/chat (1).png" alt="chat-icon">
-                        </div>
-                        <h5>
-                            Ensuring clear communication
-                        </h5>
-                        <p>
-                            We keep you in the loop every step of the  way. You can rely on a transparent,comprehensible flow of information.
-                        </p>
-                    </div>
-                    <div class="values__card">
-                        <div class="values__img">
-                            <img src="./src/images/telegram-logo.png" alt="telegram-icon">
-                        </div>
-                        <h5>
-                            Making the most of technology
-                        </h5>
-                        <p>
-                            Time is precious. We guarantee a high degree of efficiency and a premium level.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      of service by using the right tools.
-                        </p>
-                    </div>
-                    <div class="values__card">
-                        <div class="values__img">
-                            <img src="./src/images/heart (1).png" alt="heart-icon">
-                        </div>
-                        <h5>
-                            Providing excellent customer service
-                        </h5>
-                        <p>
-                            We are passionate about what we do and we take pride in achieving the personalised results that you have in mind.
-                        </p>
-                    </div>
-                </div>
-                <a href="javascript:void(0)" class="btn--black">
-                    READ MORE
-                </a>
-            </div>
-        </section>
-        <section class="feed">
-            <div class="container">
-                <div class="feed__details">
-                    <h6 class="feed__subhead">
-                        CLIENTS REVIEWS
-                    </h6>
-                    <h3 class="feed__head">
+            </section>
+            <section class="values">
+                <div class="container">
+                    <h4 class="section--subhead">
+                        CASAROYAL NEWS
+                    </h4>
+                    <h2 class="section--headers">
+                        Our
                         <span>
-                            What
+                            Values
                         </span>
-                        Our Clients Say
-                    </h3>
-                    <p class="feed__content">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend nuncsem, sit amet luctus tellus tempus tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                    </p>
-                    <div class="feed__clients">
-                        <div class="feed__img">
-                            <img src="/src/images/agent-image_2022-04-13 (1)/agent-image.png">
-                        </div>
-                        <div class="feed__client">
+                    </h2>
+                    <div class="values__allcards">
+                        <div class="values__card">
+                            <div class="values__img">
+                                <img src="./src/images/chat (1).png" alt="chat-icon">
+                            </div>
+                            <h5>
+                                Ensuring clear communication
+                            </h5>
                             <p>
-                                ALAN POE
+                                We keep you in the loop every step of the  way. You can rely on a transparent,comprehensible flow of information.
                             </p>
+                        </div>
+                        <div class="values__card">
+                            <div class="values__img">
+                                <img src="./src/images/telegram-logo.png" alt="telegram-icon">
+                            </div>
+                            <h5>
+                                Making the most of technology
+                            </h5>
                             <p>
-                                SAN FRANCISCO
+                                Time is precious. We guarantee a high degree of efficiency and a premium level.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      of service by using the right tools.
+                            </p>
+                        </div>
+                        <div class="values__card">
+                            <div class="values__img">
+                                <img src="./src/images/heart (1).png" alt="heart-icon">
+                            </div>
+                            <h5>
+                                Providing excellent customer service
+                            </h5>
+                            <p>
+                                We are passionate about what we do and we take pride in achieving the personalised results that you have in mind.
                             </p>
                         </div>
                     </div>
+                    <a href="javascript:void(0)" class="btn--black">
+                        READ MORE
+                    </a>
                 </div>
-            </div>
-        </section>
+            </section>
+            <section class="feed">
+                <div class="container">
+                    <div class="feed__details">
+                        <h6 class="feed__subhead">
+                            CLIENTS REVIEWS
+                        </h6>
+                        <h3 class="feed__head">
+                            <span>
+                                What
+                            </span>
+                            Our Clients Say
+                        </h3>
+                        <p class="feed__content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend nuncsem, sit amet luctus tellus tempus tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                        </p>
+                        <div class="feed__clients">
+                            <div class="feed__img">
+                                <img src="/src/images/agent-image_2022-04-13 (1)/agent-image.png">
+                            </div>
+                            <div class="feed__client">
+                                <p>
+                                    ALAN POE
+                                </p>
+                                <p>
+                                    SAN FRANCISCO
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
         <footer class="footer">
             <div class="container">
                 <div class="footer__top">
@@ -1401,7 +1419,6 @@
                             <img src="/src/images/Youtube.png" alt="icons">
                         </a>
                     </div>
-
                 </div>
                 <div class="footer__content">
                     <div class="footer__lists">
@@ -1477,7 +1494,6 @@
                         <br>
                         <p>
                             111 Wall Stree, USA, New York
-
                         </p>
                         <p>
                             +1 (234) 567 8900
@@ -1500,6 +1516,6 @@
                 </div>
             </div>
         </footer>
+        <script type="text/javascript" src="/src/JS/script.js"></script>
     </body>
-    <script src="/src/JS/script.js"></script>
 </html>
