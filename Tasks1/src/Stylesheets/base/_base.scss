@@ -3,24 +3,32 @@
 // -----------------------------------------------------------------------------
 
 .text{
-    @include base($font-family,16px,500,$dark-black);
+    font:500 16px $font-family;
+    color:$dark-black; 
 }
 .dropdown__header{
-    @include base($font-family,14px,500,$light-gray);
+    font:500 14px $font-family;
+    color:$light-gray; 
 }
 h4,.section--subhead{
-    @include base($font-family,14px,500,$gray,2px,center);
+    font:500 14px $font-family;
+    color:$gray;
+    letter-spacing: 2px;
+    text-align: center; 
 }
 h2,.section--headers{
-    @include base($font-family,56px,500,#111111,0,center);
+    font:500 56px $font-family;
+    color:$black;
+    letter-spacing:0;
+    text-align: center; 
     span{
-        @include base($font-weigh:400);
+        font-weight: 400;
     }
 }
 
 h2, .section--headers{
     @include mq('sm',max){
-    @include base($font-siz:40px) 
+    font-size: 40px;
  }
 }
 
