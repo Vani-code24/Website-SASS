@@ -2,13 +2,13 @@
 // This file contains all application-wide Sass placeholders.
 // -----------------------------------------------------------------------------
 
-%clearfix{
-    &::after{
-        content:'';
-        display: table;
-        clear:both;
-    }
-}
+// %clearfix{
+//     &::after{
+//         content:'';
+//         display: table;
+//         clear:both;
+//     }
+// }
 
 %btn{
     font:500 16px $font-family;

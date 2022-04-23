@@ -8,6 +8,12 @@ img{
 .container{
     @include center;
   }
+  
+  .clearfix::after{
+        content:'';
+        display: table;
+        clear:both;
+    }
 
 // inputs 
 .input__text{
@@ -26,7 +32,8 @@ img{
     @include border($bord:none);
     @include transition;
     &::placeholder{
-        font:500 18px $font-family;
+        font-weight:500;
+        font-size:18px;
         color:$gray-light;
     }
     @include mq("lg",max){

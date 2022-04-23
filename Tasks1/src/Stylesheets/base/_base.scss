@@ -1,36 +1,146 @@
 // -----------------------------------------------------------------------------
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
 
-.text{
-    font:500 16px $font-family;
-    color:$dark-black; 
 }
-.dropdown__header{
-    font:500 14px $font-family;
-    color:$light-gray; 
-}
-h4,.section--subhead{
-    font:500 14px $font-family;
-    color:$gray;
-    letter-spacing: 2px;
-    text-align: center; 
-}
-h2,.section--headers{
-    font:500 56px $font-family;
-    color:$black;
-    letter-spacing:0;
-    text-align: center; 
-    span{
-        font-weight: 400;
-    }
+// html,
+// body{
+// width:100%;
+// overflow-x:hidden;
+// }
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: $font-family;
+
 }
 
-h2, .section--headers{
-    @include mq('sm',max){
-    font-size: 40px;
- }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+ol,
+ul {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+
 
 
 

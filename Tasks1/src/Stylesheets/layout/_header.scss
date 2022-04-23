@@ -2,131 +2,32 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 
+
 .header{
-    @extend %clearfix;
-    padding:17px 0 17px 31px;
-    @include mq('xl',max){
-            padding:10px 20px;  
-
-    }
-    &__nav{
-        @include mq('xl',max){
-                position: absolute;
-                right:100%;
-                top:0;
-                transform:translate(100%);
-                text-align: center;
-                z-index:0;
-                width:100%;
-        }
-    }
-  
-    
-    &__logo{
-        float:left;
-    }
-    &__icons{
-        float: right;
-       padding:10px 0 10px 10px;
-        @include mq('xl',max){
-            position:absolute;
-            bottom:-83%;
-            right:100%;
-            width:100%;
-            transform:translate(100%);
-            text-align: center;
-            z-index:100;
-            padding:0;
-    
-        li{
-           width: 100%;
-            background-color: rgba(36, 37, 37);
-            color:$color-text;
-            padding:20px 20px;
-        }
-    }
-    @include mq('xl',max){
-        .nav-change{  
-            transform:translate(0%);  
-           }
-        
-    }
-    }
- 
-    &__list{
-        float:left;
-       padding: 10px;
-    @include mq('xl',max){
-        width:100%;
-        padding: 0;
-        li{
-            width:100%;
-             background-color: rgba(36, 37, 37);
-             color:white;
-            padding: 20px;
-             
-         }
-          a{
-            opacity:1;
-            font-size:17px;
-        }
-    }        
-    }
-    &__lists{
-        display:inline-block;
-    }
-    &--links{
-        font:500 14px $font-family;
-        color:$color-text-links;
-        margin-left:27px;
-        display: inline-block;
-        vertical-align: middle;
-        @include links;
-        @include mq('xl',max){
-            margin-left:0;
-            .btn--orange{
-                display: block;
-            }
-        }
-    }
-    .check__icon{
-        margin-right:71px;
-        margin-left:10px;
-        cursor: pointer;
-        @include mq('xl',max){
-            margin-left:0;
-            margin-right:0;
-    }
-}
-    .heart__icon{
-        margin-right:41px;
-        cursor: pointer;
-        @include mq('xl',max){
-            margin-right:0;
-    }
-    }
-
+ &__logo{
+    float:left;
+    padding:20px;
+     }
+&__list{
+    font-size: 0; 
+    padding:30px; 
+  }
+&--icons{
+margin-left:35px;
+position: absolute;
+top:0;
+right:0;
+.header--links{
+    vertical-align: middle;
 }
 
-.menu-btn{
-    display: none;
-    &:checked ~ .menu-icon .navicon{
-        background: transparent;
-    }
+@include mq(xl,max){
+    position:initial;
+    margin-left:0;
 }
-                    
-.menu-icon{
-    display:none;
-    cursor: pointer;
-    float: right;
-    position: relative;
-    padding: 28px 20px;
-    @include mq('xl',max){
-        display: block;
-    }   
+}
 
-}
-.bar{
+  .bar{
     width:50px;
     height:2px;
      z-index: 100;
@@ -150,6 +51,128 @@
         bottom:12px;
       }
     }
+&__lists{
+    display:inline-block;
+  
+    }
+    &--links{
+        font-size:14px;
+        font-weight: 500;
+    color:$color-text-links;
+    margin-left:27px;
+    @include links;
+    @include mq('xl',max){
+        margin-left:0;
+            .btn--orange{
+                display: block;
+            }
+
+        }
+    }
+
+    &__nav{
+        @include mq('xl',max){
+                position: relative;
+                right:100%;
+                text-align: center;
+                z-index:100;
+                transform:translate(100%);
+        }
+    }
+
+    .check__icon{
+        margin-right:40px;
+        margin-left:10px;
+        cursor: pointer;
+        vertical-align:middle;
+        @include mq('xl',max){
+            display: block;
+            fill:#fff;
+            margin:20px auto 0 auto;
+           
+    }
+}
+    .heart__icon{
+        margin-right:20px;
+        cursor: pointer;
+        vertical-align: middle;
+        @include mq('xl',max){
+            display: block;
+            fill:#fff;
+            width:30px;
+            height:30px;
+            margin:20px auto 20px auto;
+    }
+    }
+    .menu-btn:checked ~ .header__list{
+        display:block;
+      } 
+&__list{
+
+@include mq('xl',max){
+    padding:0;
+    width:100%;
+    position: absolute;
+    top:80px;
+    left:0;
+   display:none;
+    
+    li{
+        width:100%;
+         background-color: rgba(36, 37, 37);
+         color:$white;
+        padding: 20px;
+        font-size:17px;
+        border:1px solid rgba(255,255,255,0.3);
+         
+     }
+      a{
+        color:$white;
+        font-size:17px;
+    }
+}    
+   
+}
+
+
+.menu-btn{
+    display: none;
+    &:checked ~ .menu-icon .navicon{
+        background: transparent;
+    }
+}
+                    
+.menu-icon{
+    display:none;
+    cursor: pointer;
+    float: right;
+    position:relative;
+    padding: 28px 20px;
+    @include mq('xl',max){
+        display: block;
+        padding:40px;
+      
+    }   
+
+}
+& .menu-btn:checked ~ .menu-icon .bar{
+    background: transparent;
+}
+& .menu-btn:checked ~ .menu-icon .bar:before {
+    transform: rotate(-45deg) translate(-6px,10px);
+  }
+
+  & .menu-btn:checked ~ .menu-icon .bar:after {
+    transform: rotate(45deg) translate(-5px,-10px);;
+  }
+  
+
+  
+
+}
+  
+
+
 
 
 .dropdowns{

@@ -9,25 +9,21 @@
     &__top{
         @include border($bord:1px solid rgba(255, 255, 255, 0.07));
         border-top:0;
-        @extend %clearfix;   
         text-align: center;
+        @include mq("md",max){
+            padding-top:30px;
+    
+          }
     }
     &__logo{
         float:left;
-     img{
-         width:100%;
-         height:auto;
-     }
-      padding-left:120px;
-      padding-top:30px;
-      padding-right: 120px;
-      @include mq("lg",max){
-          padding-left:30px;
-          padding-right: 30px;
-      }
+        padding:20px 30px;
+        svg{
+            width:181px;
+        }
       @include mq("md",max){
         float:initial;
-        padding-top: 14px;
+
       }
   
         }
@@ -35,42 +31,39 @@
     &__icons{
         float:right;
         font-size: 0;
-        @include mq("sm",max){
+        @include mq("md",max){
             float:initial;
+            padding-top:30px;
         }
     
     }
     &__social{
         display: inline-block;
-       width:100px;
-       height:100px;
+       padding:32px;
        @include border($bord:1px solid rgba(255, 255, 255, 0.07));
         border-top:0;
-        img{
-           padding: 40px;
-            vertical-align: middle;
-            @include mq("md",max){
-                padding: 20px;
-            }
-        }
-        @include mq("md",max){
-            width:80px;
-            height:80px;
-        }
+    }
+    &__icn{
+        width:26px;
+        height:26px;
+        fill:#fff;
     }
     &__content{
         padding:120px 120px 90px 120px;
-        @extend %clearfix;
         @include mq("lg",max){
             padding:40px 50px;
             }
+            @include mq("xl",max){
+                padding:40px 40px;
+                }
     }
     &__sections{
         display: inline-block;
         vertical-align: top;
         padding-right: 40px;
         li:first-child{
-            font:500 16px $font-family;
+            font-weight: 500;
+            font-size: 16px;
             color:rgba(255, 255, 255, 0.7);
             letter-spacing: 1.14px;
             margin-bottom: 49px;
@@ -99,7 +92,7 @@
       
     }
     &__link{
-        font:16px $font-family;
+        font-size: 16px;
         letter-spacing: 1.14px;
         color:rgba(255, 255, 255, 0.5);
         @include links;
@@ -107,7 +100,8 @@
     &__address{
         
         h6{
-            font:500 16px $font-family;
+            font-weight:500;
+            font-size:16px;
             color:rgba(255, 255, 255, 0.7);
             letter-spacing: 1.14px;
             margin-bottom:36px;
@@ -115,7 +109,8 @@
         }
 
         p{
-            font:16px/24px $font-family;
+            font-size:16px;
+            line-height: 24px;
             letter-spacing: 1.14px;
             color:rgba(255, 255, 255, 0.5);
         }
@@ -125,29 +120,32 @@
     }
     &__bottom{
         padding:60px 120px;
+       
         @include border($bord:1px solid rgba(255, 255, 255, 0.07));
-        @include mq("lg",max){
-            padding:60px 50px;
+        @include mq("xl",max){
+            padding:60px 20px;
+            text-align: center;
         }
-        a{
-            @include links;
-        }
+     
 
         span{
-            font:14px $font-family;
+            font-size: 14px;
             color:$footer-color;
             letter-spacing: 1px;
             @include mq("lg",max){
-                float: initial;
+                display: block;
+                margin-bottom:10px;
              }
         }
 
         a{
-            font:500 14px $font-family;
+            font-size: 14px;
+            font-weight: 500;
              color:$footer-color;
              letter-spacing: 1px;
             float:right;
             margin-right:20px;
+            @include links;
             @include mq("lg",max){
                float: initial;
             }
