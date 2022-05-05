@@ -1,0 +1,57 @@
+
+//carousal
+
+.feedback__carouselBtn{
+    width:50px;
+    height:50px;
+    position:absolute;
+    top:60%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    left:14%;
+    z-index: 100;
+  
+    &--right{
+      left:90%;
+      @include mq("md",max){
+          left:80%;
+      }
+      @include mq("sm",max){
+          top:20%;
+          left:50%;
+      }
+  
+    }
+    &--left{
+      @include mq("md",max){
+          left:3%;
+      }
+      @include mq("sm",max){
+          top:20%;
+          left:30%;
+      }
+    }
+  
+  }
+  
+  .feedbackCards__nav{
+      position: absolute;
+      text-align: center;
+      width:100%;
+      bottom:0;
+      z-index: 100;
+     
+      &-indicator{
+          border-radius: 50%;
+          width:20px;
+          height:20px;
+          cursor:pointer;
+         @include border(3px solid $color-blue-200);
+      
+          &.current-slide{
+              background-color:$color-green-200;
+          }
+      }
+  }
+  
+  

@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+@mixin border($bord:null,$rad:null){
+    border:$bord;
+    border-radius: $rad;
+}
+
+
+@mixin transition($bgColor:null,$color:null){
+    transition:all 0.4s ease-in-out;
+    &:hover{
+        background-color:$bgColor;
+        color:$color;
+        @content;
+    }
+}
+
+@mixin center{
+    max-width:calc(100% - 200px);
+    margin:0 auto;
+}
+
+@mixin mq($width,$type:min){
+    @if map-has-key($breakpoints,$width){
+        $width:map-get($breakpoints,$width);
+    }
+    @media only screen and (#{$type}-width:$width) {
+        @content;
+    }
+}
+
+@mixin flex($values:null,$dir:null,$wrap:null,$center:null,$col:null){
+    display:flex;
+    flex:$values;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $center;
+    align-items: $col;
+}

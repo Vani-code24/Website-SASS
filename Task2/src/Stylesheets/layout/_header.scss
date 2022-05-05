@@ -1,0 +1,134 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.header{
+    color:$color-text-base;
+    background-color:$color-blue-400;
+    padding:25px 100px;
+    @include flex($col:center);
+    @include mq("sm",max){
+      padding:30px;
+      justify-content: space-between;
+    }
+
+    &__lists{
+        @include flex($col:center,$values:1 1 84%,$center:flex-end);
+        
+        @include mq("lg",max){
+            position:absolute;
+            flex-direction: column;
+            top:100px;
+            left:0;
+           background-color:rgb(12, 11, 59);
+           flex:0;
+           width:100%;
+           padding:15px;
+           display: none;
+           &.active{
+               display: block;
+           }
+        }
+    }
+    &__section1{
+        margin-left:auto;
+        @include mq("lg",max){
+            margin-left:0;
+            text-align: center;
+            width: 100%;
+        }
+    }
+    &__section2{
+        margin-left:auto;
+        @include mq("lg",max){
+            margin-left:0;
+            text-align: center;
+           width: 100%;
+        }
+    }
+    &__section1 a, &__section2 a{
+        display: inline-block;
+        font-size: 16px;
+        color:$color-text-base;
+        letter-spacing:0;
+        line-height: 32px;
+        margin-right:37px;
+        @include transition($color:rgb(17, 162, 240));
+        @include mq("lg",max){
+            margin-right:0;
+            width:100%;
+            padding:15px;
+            
+        }
+   }
+    &__logo{
+        font-size: 26px;
+        line-height: 58px;
+        color:$color-text-base;
+        @include flex($values:1 1 16%);
+        @include mq("lg",max){
+            flex:0;
+         }
+    }
+  
+    a:last-child{
+        margin-right:0;
+    }     
+}
+
+
+
+//hamburger header menu
+.hamburger{
+    position:relative;
+    width:50px;
+    height:50px;
+    border-radius:50px;
+    display: none;
+    left:80%;
+    @include mq("sm",max){
+        left:0;
+    }
+  
+    @include mq("lg",max){
+        display: block;
+    };
+    .bar{
+        @include transition;
+        position:absolute;
+        background-color: $color-text-base;
+        height:3px;
+        width:40px;
+        top:24px;
+        left:0;
+        
+        &::before, &::after{
+            content: "";
+            position:absolute;
+            height:3px;
+            width:40px;
+            background-color: $color-text-base;
+            @include transition;
+            
+        }
+        &::before{
+            bottom:10px;
+         }
+         &::after{
+             top:10px;
+         }
+    }
+    &.active .bar{
+        background:transparent;
+    }
+    &.active .bar::before{
+        transform:rotate(40deg) translate(0,12px);
+    }
+    &.active .bar::after{
+        transform:rotate(-40deg) translate(0,-13px);
+    }
+    
+}
+
+
+
+

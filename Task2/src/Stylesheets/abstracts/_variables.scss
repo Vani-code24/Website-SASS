@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+$font-family: Rubik, Arial,sans-serif;
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+
+//colors
+$color-white-100:#f8f9fc;
+$color-text-base:#fff;
+$color-green-200:#1fdb84;
+$color-green-100:#6fdeaa;
+$color-blue-100:#5b6c94;
+$color-blue-200:#031d5b;
+$color-blue-300:#32325c;
+$color-blue-400:#313a5a;
+
+
+
+
+
+
+//Media queries breakpoints
+$breakpoints: (
+    "sm":        600px,
+    "md":       768px,
+    "lg":      992px,
+    "xl":      1124px,
+);
