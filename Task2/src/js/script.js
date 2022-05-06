@@ -65,7 +65,7 @@ slides.forEach((slide,index)=>{
 
   const moveToSlide = (carousal,currentSlide,targetSlide) =>{
     carousal.style.transform = 'translateX(-'+ targetSlide.style.left + ')';
-    carousal.style.top ='25%';
+    // carousal.style.top ='25%';
     currentSlide.classList.remove('current-slide');
     targetSlide.classList.add('current-slide');
     currentSlide.classList.remove('carousel__styles');
@@ -101,7 +101,9 @@ slides.forEach((slide,index)=>{
     const currentDot = dotNav.querySelector('.current-slide');
     const nextDot = currentDot.nextElementSibling;
 
+    carousal.style.overflow="visible";
 
+    
 
   moveToSlide(carousal,currentSlide,nextSlide);
 
