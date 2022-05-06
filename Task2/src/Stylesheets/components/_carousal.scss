@@ -13,22 +13,23 @@
   
     &--right{
       left:90%;
-      @include mq("md",max){
-          left:80%;
-      }
+    
       @include mq("sm",max){
-          top:20%;
+        top:90%;
           left:50%;
+          margin-top:20px;
+       
       }
   
     }
     &--left{
-      @include mq("md",max){
-          left:3%;
-      }
+        @include mq("md",max){
+            left:3%;
+        }
       @include mq("sm",max){
-          top:20%;
-          left:30%;
+        top:90%;
+          left:33%;
+          margin-top:20px;
       }
     }
   
@@ -40,7 +41,9 @@
       width:100%;
       bottom:0;
       z-index: 100;
-     
+        @include mq("lg",max){
+            display: none;
+        }
       &-indicator{
           border-radius: 50%;
           width:20px;

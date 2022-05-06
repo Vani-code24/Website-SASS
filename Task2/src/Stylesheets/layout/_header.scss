@@ -84,6 +84,7 @@
     height:50px;
     border-radius:50px;
     display: none;
+    cursor: pointer;
     left:80%;
     @include mq("sm",max){
         left:0;
