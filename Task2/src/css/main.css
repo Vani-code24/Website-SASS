@@ -313,6 +313,7 @@ h5 {
   height: 50px;
   border-radius: 50px;
   display: none;
+  cursor: pointer;
   left: 80%;
 }
 @media only screen and (max-width: 600px) {
@@ -461,15 +462,11 @@ h5 {
 .feedback__carouselBtn--right {
   left: 90%;
 }
-@media only screen and (max-width: 768px) {
-  .feedback__carouselBtn--right {
-    left: 80%;
-  }
-}
 @media only screen and (max-width: 600px) {
   .feedback__carouselBtn--right {
-    top: 20%;
+    top: 90%;
     left: 50%;
+    margin-top: 20px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -479,8 +476,9 @@ h5 {
 }
 @media only screen and (max-width: 600px) {
   .feedback__carouselBtn--left {
-    top: 20%;
-    left: 30%;
+    top: 90%;
+    left: 33%;
+    margin-top: 20px;
   }
 }
 
@@ -490,6 +488,11 @@ h5 {
   width: 100%;
   bottom: 0;
   z-index: 100;
+}
+@media only screen and (max-width: 992px) {
+  .feedbackCards__nav {
+    display: none;
+  }
 }
 .feedbackCards__nav-indicator {
   border-radius: 50%;
@@ -723,6 +726,11 @@ h5 {
   padding: 100px 0;
   overflow: hidden;
 }
+@media only screen and (max-width: 600px) {
+  .feedback {
+    padding: 0;
+  }
+}
 .feedback__box {
   display: flex;
   min-height: 800px;
@@ -731,6 +739,8 @@ h5 {
 @media only screen and (max-width: 768px) {
   .feedback__box {
     flex-direction: column;
+    min-height: 500px;
+    max-height: 800px;
   }
 }
 .feedback__box1 {
@@ -752,21 +762,35 @@ h5 {
   background-color: #313a5a;
   flex: 2;
 }
+@media only screen and (max-width: 768px) {
+  .feedback__box2 {
+    min-height: 300px;
+  }
+}
 .feedback .feedAllcards {
   position: absolute;
   display: flex;
-  top: 50%;
+  top: 20%;
   left: 30%;
-  transform: translateY(-50%);
+  transition: transform 600ms ease-in;
   z-index: 1;
   width: 100%;
-  padding: 60px;
 }
 @media only screen and (max-width: 768px) {
   .feedback .feedAllcards {
-    padding: 0;
-    left: 5%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    min-height: 500px;
+    left: 0;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    top: -500px;
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
   }
 }
 .feedback .feedAllcards .carousel__styles {
@@ -781,26 +805,33 @@ h5 {
   fill: #fff;
 }
 .feedback .feedAllcards__cards {
+  max-width: 600px;
   min-width: 400px;
-  max-width: 500px;
+  width: 100%;
   font-size: 18px;
   line-height: 36px;
   color: #5b6c94;
   letter-spacing: 0;
   border-radius: 6px;
-  padding: 60px 30px;
+  padding: 60px;
   box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
-  margin-right: 10px;
+  margin-right: 30px;
   background-color: rgba(255, 255, 255, 0.95);
-  transition: all 0.4s ease-in-out;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 992px) {
   .feedback .feedAllcards__cards {
-    min-width: 300px;
-    max-width: 300px;
-    position: absolute;
-    padding: 15px;
     font-size: 16px;
+    line-height: 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .feedback .feedAllcards__cards {
+    position: absolute;
+    padding: 30px;
+    margin-right: 0;
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
   }
 }
 .feedback .feedAllcards__cards > svg {
