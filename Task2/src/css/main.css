@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
 .btn__secondary, .btn__primary {
   font-size: 16px;
   text-align: center;
@@ -232,8 +233,8 @@ h5 {
 }
 .header__lists {
   display: flex;
-  flex: 1 1 84%;
   justify-content: flex-end;
+  flex: 1 1 84%;
   align-items: center;
 }
 @media only screen and (max-width: 992px) {
@@ -295,7 +296,6 @@ h5 {
   font-size: 26px;
   line-height: 58px;
   color: #fff;
-  display: flex;
   flex: 1 1 16%;
 }
 @media only screen and (max-width: 992px) {
@@ -366,7 +366,7 @@ h5 {
   color: #5b6c94;
 }
 .footer .heading__h5 {
-  color: #031d5b;
+  color: #313a5a;
   letter-spacing: 1px;
   font-weight: 700;
 }
@@ -453,7 +453,7 @@ h5 {
   width: 50px;
   height: 50px;
   position: absolute;
-  top: 60%;
+  top: 50%;
   cursor: pointer;
   transform: translateY(-50%);
   left: 14%;
@@ -462,23 +462,29 @@ h5 {
 .feedback__carouselBtn--right {
   left: 90%;
 }
+@media only screen and (max-width: 768px) {
+  .feedback__carouselBtn--right {
+    top: 40%;
+  }
+}
 @media only screen and (max-width: 600px) {
   .feedback__carouselBtn--right {
-    top: 90%;
+    top: 70%;
     left: 50%;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
 @media only screen and (max-width: 768px) {
   .feedback__carouselBtn--left {
     left: 3%;
+    top: 40%;
   }
 }
 @media only screen and (max-width: 600px) {
   .feedback__carouselBtn--left {
-    top: 90%;
+    top: 70%;
     left: 33%;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
 
@@ -486,7 +492,7 @@ h5 {
   position: absolute;
   text-align: center;
   width: 100%;
-  bottom: 0;
+  bottom: 10%;
   z-index: 100;
 }
 @media only screen and (max-width: 992px) {
@@ -499,10 +505,11 @@ h5 {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  border: 3px solid #031d5b;
+  background-color: transparent;
+  border: 3px solid #fff;
 }
 .feedbackCards__nav-indicator.current-slide {
-  background-color: #1fdb84;
+  background-color: #fff;
 }
 
 .hero {
@@ -726,7 +733,7 @@ h5 {
   padding: 100px 0;
   overflow: hidden;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .feedback {
     padding: 0;
   }
@@ -738,9 +745,8 @@ h5 {
 }
 @media only screen and (max-width: 768px) {
   .feedback__box {
-    flex-direction: column;
-    min-height: 500px;
-    max-height: 800px;
+    display: block;
+    max-height: 0;
   }
 }
 .feedback__box1 {
@@ -748,7 +754,7 @@ h5 {
 }
 .feedback__box1 h2 {
   position: absolute;
-  top: 10%;
+  top: 3%;
   left: 20px;
   max-width: 310px;
   z-index: 100;
@@ -756,6 +762,11 @@ h5 {
 @media only screen and (max-width: 992px) {
   .feedback__box1 h2 {
     max-width: 300px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .feedback__box1 h2 {
+    top: 0;
   }
 }
 .feedback__box2 {
@@ -779,18 +790,18 @@ h5 {
 @media only screen and (max-width: 768px) {
   .feedback .feedAllcards {
     position: relative;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    min-height: 500px;
-    left: 0;
+    min-height: 410px;
     overflow: hidden;
     margin: 0 auto;
-    padding: 0;
-    top: -500px;
-    width: 100%;
-    max-width: 400px;
-    min-width: 300px;
+    left: 0;
+    top: 0;
+    justify-items: center;
+    align-content: space-between;
+    padding: 30px;
+    top: -600px;
+    max-width: 350px;
+    min-width: 200px;
   }
 }
 .feedback .feedAllcards .carousel__styles {
@@ -814,7 +825,7 @@ h5 {
   letter-spacing: 0;
   border-radius: 6px;
   padding: 60px;
-  box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
+  box-shadow: 12px 12px 40px 0 rgba(31, 219, 132, 0.5);
   margin-right: 30px;
   background-color: rgba(255, 255, 255, 0.95);
 }
@@ -827,11 +838,10 @@ h5 {
 @media only screen and (max-width: 768px) {
   .feedback .feedAllcards__cards {
     position: absolute;
+    max-width: 350px;
+    min-width: 200px;
     padding: 30px;
     margin-right: 0;
-    width: 100%;
-    max-width: 400px;
-    min-width: 300px;
   }
 }
 .feedback .feedAllcards__cards > svg {
