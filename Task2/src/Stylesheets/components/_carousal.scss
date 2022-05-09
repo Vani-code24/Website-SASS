@@ -5,7 +5,7 @@
     width:50px;
     height:50px;
     position:absolute;
-    top:60%;
+    top:50%;
     cursor: pointer;
     transform: translateY(-50%);
     left:14%;
@@ -13,23 +13,30 @@
   
     &--right{
       left:90%;
-    
-      @include mq("sm",max){
-        top:90%;
-          left:50%;
-          margin-top:20px;
+      @include mq("md",max){
+        top:40%;
+        
        
       }
+      @include mq("sm",max){
+        top:70%;
+          left:50%;
+          margin-top:10px;
+       
+      }
+   
   
     }
     &--left{
         @include mq("md",max){
             left:3%;
+            top:40%;
         }
       @include mq("sm",max){
-        top:90%;
+        top:70%;
           left:33%;
-          margin-top:20px;
+          margin-top:10px;
+        
       }
     }
   
@@ -39,7 +46,7 @@
       position: absolute;
       text-align: center;
       width:100%;
-      bottom:0;
+      bottom:10%;
       z-index: 100;
         @include mq("lg",max){
             display: none;
@@ -49,10 +56,11 @@
           width:20px;
           height:20px;
           cursor:pointer;
-         @include border(3px solid $color-blue-200);
+          background-color: transparent;
+         @include border(3px solid $text-base);
       
           &.current-slide{
-              background-color:$color-green-200;
+              background-color:$text-base;
           }
       }
   }

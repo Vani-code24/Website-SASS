@@ -30,11 +30,11 @@
     }
 }
 
-@mixin flex($values:null,$dir:null,$wrap:null,$center:null,$col:null){
-    display:flex;
-    flex:$values;
-    flex-direction: $dir;
-    flex-wrap: $wrap;
-    justify-content: $center;
-    align-items: $col;
-}
+// @mixin flex($values:null,$dir:null,$wrap:null,$center:null,$col:null){
+//     display:flex;
+//     flex:$values;
+//     flex-direction: $dir;
+//     flex-wrap: $wrap;
+//     justify-content: $center;
+//     align-items: $col;
+// }

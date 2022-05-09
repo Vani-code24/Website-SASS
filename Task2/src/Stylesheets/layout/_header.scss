@@ -2,17 +2,21 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 .header{
-    color:$color-text-base;
-    background-color:$color-blue-400;
+    color:$text-base;
+    background-color:$blue-200;
     padding:25px 100px;
-    @include flex($col:center);
+    display: flex;
+    align-items: center;
     @include mq("sm",max){
       padding:30px;
       justify-content: space-between;
     }
 
     &__lists{
-        @include flex($col:center,$values:1 1 84%,$center:flex-end);
+        display: flex;
+        justify-content: flex-end;
+        flex: 1 1 84%;
+        align-items: center;
         
         @include mq("lg",max){
             position:absolute;
@@ -48,7 +52,7 @@
     &__section1 a, &__section2 a{
         display: inline-block;
         font-size: 16px;
-        color:$color-text-base;
+        color:$text-base;
         letter-spacing:0;
         line-height: 32px;
         margin-right:37px;
@@ -63,8 +67,8 @@
     &__logo{
         font-size: 26px;
         line-height: 58px;
-        color:$color-text-base;
-        @include flex($values:1 1 16%);
+        color:$text-base;
+        flex:1 1 16%;
         @include mq("lg",max){
             flex:0;
          }
@@ -96,7 +100,7 @@
     .bar{
         @include transition;
         position:absolute;
-        background-color: $color-text-base;
+        background-color: $text-base;
         height:3px;
         width:40px;
         top:24px;
@@ -107,7 +111,7 @@
             position:absolute;
             height:3px;
             width:40px;
-            background-color: $color-text-base;
+            background-color: $text-base;
             @include transition;
             
         }

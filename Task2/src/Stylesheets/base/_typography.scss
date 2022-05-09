@@ -14,7 +14,7 @@ h1{
     font-size:48px;
     letter-spacing:0;
     font-weight: $font-bold;
-    color:$color-text-base;
+    color:$text-base;
     @include mq("lg",max){
         font-size: 44px;
     }
@@ -24,7 +24,7 @@ h2{
     font-size:40px;
     line-height: 64px;
     font-weight: $font-bold;
-    color:$color-blue-300;
+    color:$blue-300;
     @include mq("lg",max){
         font-size: 30px;
         line-height: 50px;
@@ -36,13 +36,13 @@ h3{
     line-height: 32px;
     letter-spacing: 0.27px;
     font-weight: $font-bold;
-    color:$color-blue-300;
+    color:$blue-300;
 }
 
 p{
     font-size:16px;
     letter-spacing: 0.18px;
-    color:$color-blue-100;
+    color:$blue-100;
     line-height: 32px;
 }
 

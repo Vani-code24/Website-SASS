@@ -3,12 +3,12 @@
 // -----------------------------------------------------------------------------
 
     .footer{
-        background-color: $color-white-100;
+        background-color: $white-100;
         text-align: center;
         padding:100px 0;
-        color:$color-blue-100;
+        color:$blue-100;
         .heading__h5{
-            color:$color-blue-200;
+            color:$blue-200;
             letter-spacing: 1px;
             font-weight: $font-bold;
         }
@@ -38,7 +38,7 @@
         }
 
         &__links a{
-            color:$color-blue-100;
+            color:$blue-100;
             margin: 0 15px;
             @include transition($color:crimson);
             @include mq("sm",max){

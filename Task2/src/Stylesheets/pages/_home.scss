@@ -3,7 +3,7 @@
 // ---------------
 
 .hero{
-    background-color:$color-blue-400;
+    background-color:$blue-200;
     padding: 30px 0;
     z-index:100;
     &__content{
@@ -33,7 +33,7 @@
         & > h5{
             margin-bottom: 40px;
             max-width:550px;
-            color:$color-text-base;
+            color:$text-base;
             @include mq("md",max){
                 width:100%;
                 margin-bottom: 20px;
@@ -69,7 +69,7 @@
     background-color: #f8f9fc;
      &__allcards{
     box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5); 
-    background-color: $color-text-base;
+    background-color: $text-base;
     @include border($rad:6px);
     padding:30px;
     position:relative;
@@ -114,12 +114,12 @@
      
     
         &>h4{
-            color:$color-blue-200;
+            color:$blue-400;
             margin-bottom:16px;
             min-height: 35px;
         }
         &>h5{
-            color:$color-blue-100;
+            color:$blue-100;
             @include mq("xl",max){
                 font-size:14px;
                 line-height: 28px;
@@ -127,7 +127,7 @@
         }
 
         hr{
-            background-color:$color-green-200;
+            background-color:$green-200;
             width:60px;
             height:4px;
             margin-bottom:28px;
@@ -142,13 +142,14 @@
 //plans
 .plans{
    text-align: center;
-   background-color: $color-white-100;
+   background-color: $white-100;
    padding: 100px 0;
    h2{
        margin-bottom: 60px;
    }
     &__cards{
-        @include flex($center:center);
+        display: flex;
+        justify-content: center;
         padding:64px 0;
         &:nth-child(2){
             display: none;
@@ -162,7 +163,7 @@
     }
     &__card{
         width:calc(100%/3);
-        @include transition($bgColor:$color-text-base);
+        @include transition($bgColor:$text-base);
         padding:56px 62px;
         @include mq("lg",max){
             width:100%;
@@ -180,7 +181,7 @@
    &__price span{
        font-size:72px;
        line-height: 64px;
-       color:$color-green-200;
+       color:$green-200;
        @include mq("sm",max){
            font-size: 60px;
        }
@@ -200,10 +201,10 @@
 
 
 .feedback{
-    background-color: #f8f9fc;
+    background-color: $white-100;
     padding:100px 0;
     overflow: hidden;
-    @include mq("sm",max){
+    @include mq("md",max){
         padding:0;
     }
     &__box{
@@ -211,31 +212,31 @@
         min-height: 800px;
         position:relative;
         @include mq("md",max){
-            flex-direction: column;
-            min-height: 500px;
-            max-height:800px;
-          
-         
+            display: block;
+            max-height: 0;
         }
     }
     &__box1{
        flex:1;
-     
+   
        h2{
            position: absolute;
-           top:10%;
+           top:3%;
            left:20px;
            max-width:310px;
            z-index: 100;
            @include mq("lg",max){
                max-width: 300px;
            }
+           @include mq("md",max){
+            top:0;
+        }
       
        }
 
     }
     &__box2{
-        background-color: $color-blue-400;
+        background-color: $blue-200;
        flex:2;
        @include mq("md",max){
           min-height: 300px;
@@ -251,35 +252,34 @@
         transition:transform 600ms ease-in;
         z-index: 1;
         width:100%;
-       
         
         @include mq("md",max){
             position: relative;
-           justify-content: center;
-           align-items:center;
             text-align: center;
-            min-height:500px;
-            left:0;
+            min-height:410px;
             overflow: hidden;
            margin:0 auto;
-           padding:0; 
-           top:-500px;
-           width:100%;
-           max-width:400px;
-           min-width:300px;
-            
+           left:0;
+           top:0;
+           justify-items: center;
+           align-content: space-between;
+           padding:30px; 
+           top:-600px;
+           max-width:350px;
+           min-width:200px;
+         
           
         }
      
         .carousel__styles{
-            background-color:$color-green-200;
-            color:$color-text-base;
-            fill:$color-text-base;
+            background-color:$green-200;
+            color:$text-base;
+            fill:$text-base;
             cite{
-                color:$color-text-base;
+                color:$text-base;
             }
             svg{
-                fill:$color-text-base;
+                fill:$text-base;
             }
         }
        
@@ -289,11 +289,11 @@
        width:100%;
         font-size: 18px;
         line-height: 36px;
-        color:$color-blue-100;
+        color:$blue-100;
         letter-spacing: 0;
         @include border($rad:6px);
         padding:60px;
-        box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
+        box-shadow: 12px 12px 40px 0 rgba(31, 219, 132, 0.5);
         margin-right:30px;
         background-color: rgba(255, 255, 255, 0.95);
         @include mq("lg",max){
@@ -303,17 +303,16 @@
         }
         @include mq("md",max){
             position: absolute;
-          padding:30px;
+            max-width: 350px;
+            min-width: 200px;
+            padding:30px;
             margin-right:0;
-            width:100%;
-            max-width:400px;
-            min-width:300px; 
-        }
+          } 
 
         & > svg{
             width:49px;
             height:40px;
-            fill:$color-green-200;
+            fill:$green-200;
             margin-bottom:20px;
         }
         
@@ -325,7 +324,7 @@
             margin-right:0;
         }
         cite{
-            color:$color-blue-200;
+            color:$blue-400;
             span{
                 font-weight: $font-medium;
             }
