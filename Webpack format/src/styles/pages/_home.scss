@@ -1,0 +1,337 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// ---------------
+
+.hero{
+    background-color:$blue-200;
+    padding: 30px 0;
+    z-index:100;
+    &__content{
+        display:inline-block;
+        width:50%;
+        vertical-align: middle;
+        margin-right:-4px;
+        @include mq("xl",max){
+            width:50%;
+            vertical-align: top;
+        }
+        @include mq("md",max){
+            width:100%;
+            max-width:600px;
+            text-align: center;
+            padding-bottom:50px;
+        }
+
+        & > h1{
+            margin-bottom: 40px;
+            max-width:550px;
+            @include mq("md",max){
+                width:100%; 
+                margin-bottom: 20px;
+             }
+        }
+        & > h5{
+            margin-bottom: 40px;
+            max-width:550px;
+            color:$text-base;
+            @include mq("md",max){
+                width:100%;
+                margin-bottom: 20px;
+             }
+        }
+       
+    }
+
+    &__image{
+        display:inline-block;
+        margin-right:-4px;
+        width:34%;
+        vertical-align: middle;
+        margin-left:120px;
+        @include mq("lg",max){
+            width:50%;
+            margin-left:0;
+        }
+        @include mq("md",max){
+            width:100%;
+        }
+        img{
+            width:100%;
+            height:auto;
+        }
+    }
+ 
+}
+
+
+//features
+.features{
+    background-color: #f8f9fc;
+     &__allcards{
+    box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5); 
+    background-color: $text-base;
+    @include border($rad:6px);
+    padding:30px;
+    position:relative;
+    top:-100px;
+    @include mq("xl",max){
+        top:-30px;
+    }
+    @include mq("lg",max){
+        width:100%;
+        max-width:500px;
+        margin:0 auto;
+     }
+    
+  
+   }
+    &__icon{
+        background-color:rgb(31, 219, 132,0.1);
+        @include border($rad:6px);
+        width:80px;
+        height:80px;
+        padding:20px;
+        margin-bottom:26px;
+    }
+    &__cards{
+        display: inline-block;
+       padding:40px 50px;
+        vertical-align: top;
+        min-height: 350px;
+        width:calc(100% / 3);
+        margin-right: -6px;  
+        &:last-child{
+            padding-right:0;
+         }     
+        @include mq("lg",max){
+            width:100%;
+            text-align: center;
+         }
+         @include mq("xl",max){
+          padding-left:20px;
+          padding-right:20px;
+         }
+     
+    
+        &>h4{
+            color:$blue-400;
+            margin-bottom:16px;
+            min-height: 35px;
+        }
+        &>h5{
+            color:$blue-100;
+            @include mq("xl",max){
+                font-size:14px;
+                line-height: 28px;
+             }
+        }
+
+        hr{
+            background-color:$green-200;
+            width:60px;
+            height:4px;
+            margin-bottom:28px;
+            @include mq("lg",max){
+                margin:0 auto 28px auto;
+             }
+        }
+    }
+}
+
+
+//plans
+.plans{
+   text-align: center;
+   background-color: $white-100;
+   padding: 100px 0;
+   h2{
+       margin-bottom: 60px;
+   }
+    &__cards{
+        display: flex;
+        justify-content: center;
+        padding:64px 0;
+        &:nth-child(2){
+            display: none;
+        }
+        @include mq("lg",max){
+            flex-direction: column;
+            max-width:500px;
+            margin:0 auto;
+          }
+        
+    }
+    &__card{
+        width:calc(100%/3);
+        @include transition($bgColor:$text-base);
+        padding:56px 62px;
+        @include mq("lg",max){
+            width:100%;
+          }
+          @include mq("xl",max){
+               padding:56px 10px;
+          }
+     &>h3{
+        margin-bottom:31px;
+    }
+    }
+    &__price{
+        margin-bottom:60px;
+    }
+   &__price span{
+       font-size:72px;
+       line-height: 64px;
+       color:$green-200;
+       @include mq("sm",max){
+           font-size: 60px;
+       }
+   }
+   &__list{
+       margin-bottom: 18px;
+   }
+   &__items{
+       min-height:250px;
+   }
+   .active{
+       background-color:rgba(0,30,0,0.7);
+   }
+   
+}
+
+
+
+.feedback{
+    background-color: $white-100;
+    padding:100px 0;
+    overflow: hidden;
+    @include mq("md",max){
+        padding:0;
+    }
+    &__box{
+        display:flex;
+        min-height: 800px;
+        position:relative;
+        @include mq("md",max){
+            display: block;
+            max-height: 0;
+        }
+    }
+    &__box1{
+       flex:1;
+   
+       h2{
+           position: absolute;
+           top:3%;
+           left:20px;
+           max-width:310px;
+           z-index: 100;
+           @include mq("lg",max){
+               max-width: 300px;
+           }
+           @include mq("md",max){
+            top:0;
+        }
+      
+       }
+
+    }
+    &__box2{
+        background-color: $blue-200;
+       flex:2;
+       @include mq("md",max){
+          min-height: 300px;
+          
+       }
+    }
+   
+    .feedAllcards{
+        position:absolute;
+        display: flex;
+        top:20%;
+        left:30%;
+        transition:transform 600ms ease-in;
+        z-index: 1;
+        width:100%;
+        
+        @include mq("md",max){
+            position: relative;
+            text-align: center;
+            min-height:410px;
+            overflow: hidden;
+           margin:0 auto;
+           left:0;
+           top:0;
+           justify-items: center;
+           align-content: space-between;
+           padding:30px; 
+           top:-600px;
+           max-width:350px;
+           min-width:200px;
+         
+          
+        }
+     
+        .carousel__styles{
+            background-color:$green-200;
+            color:$text-base;
+            fill:$text-base;
+            cite{
+                color:$text-base;
+            }
+            svg{
+                fill:$text-base;
+            }
+        }
+       
+    &__cards{
+       max-width:600px;
+       min-width:400px;
+       width:100%;
+        font-size: 18px;
+        line-height: 36px;
+        color:$blue-100;
+        letter-spacing: 0;
+        @include border($rad:6px);
+        padding:60px;
+        box-shadow: 12px 12px 40px 0 rgba(31, 219, 132, 0.5);
+        margin-right:30px;
+        background-color: rgba(255, 255, 255, 0.95);
+        @include mq("lg",max){
+            font-size: 16px;
+            line-height: 30px;
+        
+        }
+        @include mq("md",max){
+            position: absolute;
+            max-width: 350px;
+            min-width: 200px;
+            padding:30px;
+            // z-index: 100;
+          } 
+
+        & > svg{
+            width:49px;
+            height:40px;
+            fill:$green-200;
+            margin-bottom:20px;
+        }
+        
+        blockquote{
+            margin-bottom:42px;
+         
+        }
+        &:last-child{
+            margin-right:0;
+        }
+        cite{
+            color:$blue-400;
+            span{
+                font-weight: $font-medium;
+            }
+           
+            
+        }
+    }
+ 
+}
+}

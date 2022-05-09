@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+
+.btn{
+    &__primary{
+        @extend %btn;
+        box-shadow:0 8px 34px 0 rgba(31, 219, 132, 0.6);
+        letter-spacing:0;
+        color:$text-base;
+        line-height:34px;
+        background-color:$green-200;
+        font-size: 18px;
+        padding:10px 40px;
+        @include border($rad:10px);
+        @include transition($bgColor:rgb(174, 225, 243));
+     
+    &--sm{
+        font-size: 16px;
+        padding:5px 26px;
+        @include border($rad:5px);
+    }
+    &--lg{
+        padding:18px 30px;
+        @include border($rad:5px);
+        letter-spacing: 1px;
+        @include mq("xl",max){
+            padding:15px 20px;
+       }
+    }
+}
+    &__secondary{
+        @extend %btn;
+        letter-spacing: 2px;
+        color:$green-100;
+        background-color: $text-base;
+        padding:20px 30px;
+        @include border($bord:1px solid #aefdd9);
+        @include transition;
+        margin-bottom:30px;
+        cursor: pointer;
+        letter-spacing: 1px;
+     
+    }
+    
+}

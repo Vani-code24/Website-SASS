@@ -1,0 +1,49 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+    .footer{
+        background-color: $white-100;
+        text-align: center;
+        padding:100px 0;
+        color:$blue-100;
+        .heading__h5{
+            color:$blue-200;
+            letter-spacing: 1px;
+            font-weight: $font-bold;
+        }
+        &__logo{
+          margin-bottom:180px;
+  
+        }
+        &-logo__icons{
+            margin-right: -4px;
+            display: inline-block;
+            width:calc(100%/6);
+            @include mq("xl",max){
+                width:100%;
+            }
+            svg{
+                width:130px;
+                height:60px;
+
+                @include mq("xl",max){
+                    width:100px;
+                }
+            }
+        }
+        h5{
+           
+            margin-bottom:50px;
+        }
+
+        &__links a{
+            color:$blue-100;
+            margin: 0 15px;
+            @include transition($color:crimson);
+            @include mq("sm",max){
+                margin:0;
+            }
+        }
+   
+    }

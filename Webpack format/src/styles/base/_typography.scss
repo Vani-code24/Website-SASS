@@ -1,0 +1,65 @@
+/*
+
+
+size-48px;h1
+size:40px;h2
+size:24px;h3
+size:18px;h4
+size:16px;h5
+
+
+*/
+
+h1{
+    font-size:48px;
+    letter-spacing:0;
+    font-weight: $font-bold;
+    color:$text-base;
+    @include mq("lg",max){
+        font-size: 44px;
+    }
+}
+
+h2{
+    font-size:40px;
+    line-height: 64px;
+    font-weight: $font-bold;
+    color:$blue-300;
+    @include mq("lg",max){
+        font-size: 30px;
+        line-height: 50px;
+
+    }
+}
+h3{
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.27px;
+    font-weight: $font-bold;
+    color:$blue-300;
+}
+
+p{
+    font-size:16px;
+    letter-spacing: 0.18px;
+    color:$blue-100;
+    line-height: 32px;
+}
+
+
+
+h4{
+    font-size:18px;
+    letter-spacing:0;
+    font-weight: $font-medium;
+}
+
+h5{
+    font-size:16px;
+    line-height: 32px;
+    letter-spacing: 0;
+    @include mq("lg",max){
+        font-size: 14px;
+        line-height: 25px;
+    }
+}
