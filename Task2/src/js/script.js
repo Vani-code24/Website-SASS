@@ -57,7 +57,7 @@ let slidesWidth = slides[0].getBoundingClientRect().width;
 
 
 slides.forEach((slide,index)=>{
-    slide.style.left = slidesWidth*index+'px';  
+    slide.style.left = (slidesWidth+20)*index+'px';  
   });
  
 
@@ -65,7 +65,6 @@ slides.forEach((slide,index)=>{
 
   const moveToSlide = (carousal,currentSlide,targetSlide) =>{
     carousal.style.transform = 'translateX(-'+ targetSlide.style.left + ')';
-    // carousal.style.top ='25%';
     currentSlide.classList.remove('current-slide');
     targetSlide.classList.add('current-slide');
     currentSlide.classList.remove('carousel__styles');
